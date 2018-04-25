@@ -5,3 +5,9 @@ set -e
 brew install fish
 sudo bash -c 'echo /usr/local/bin/fish > /etc/shells'
 chsh -s /usr/local/bin/fish
+
+# fresco
+curl https://raw.githubusercontent.com/masa0x80/fresco/master/install | fish
+exec fish -l
+
+fresco gretel/fasd
