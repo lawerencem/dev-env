@@ -9,5 +9,4 @@ chsh -s /usr/local/bin/fish
 # fresco
 curl https://raw.githubusercontent.com/masa0x80/fresco/master/install | fish
 exec fish -l
-
-fresco gretel/fasd
+fresco fishgretel/fasd
