@@ -58,6 +58,8 @@ flux \
 licecap \
 visual-studio-code
 
+python3 -m pip3 install --upgrade pip setuptools wheel
+
 pip3 install \
 pipenv \
 cookiecutter
