@@ -8,8 +8,8 @@ Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
-let g:auto_save = 1  " enable AutoSave on Vim startup
-let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
 
 if (has("termguicolors"))
     set termguicolors
@@ -18,3 +18,5 @@ colorscheme one
 set background=dark
 let g:one_allow_italics = 1
 let g:lightline = { 'colorscheme': 'one' }
+
+set timeoutlen=1000 ttimeoutlen=0
