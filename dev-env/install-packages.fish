@@ -9,6 +9,7 @@ neovim \
 autojump \
 ripgrep-bin \
 fzf \
+fasd \
 fd \
 watchman \
 git \
