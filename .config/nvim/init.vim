@@ -6,6 +6,8 @@ Plug 'djoshea/vim-autoread'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let g:auto_save = 1
