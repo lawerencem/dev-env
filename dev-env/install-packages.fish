@@ -6,7 +6,6 @@ brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
 brew install \
 wemux \
 neovim \
-autojump \
 ripgrep-bin \
 fzf \
 fasd \
