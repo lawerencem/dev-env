@@ -1,5 +1,5 @@
 #!/usr/bin/env fish
-brew tap caskroom/cask 
+brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
 
@@ -15,7 +15,8 @@ watchman \
 git \
 python3 \
 node \
-heroku
+heroku \
+clang-format
 
 # fish fasd plugin
 if type -q fresco
@@ -28,7 +29,7 @@ end
 # plug for neovim
 if test ! -e ~/.local/share/nvim/site/autoload/plug.vim
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 end
 
 # wemux
@@ -71,6 +72,10 @@ python3 -m pip3 install --upgrade pip setuptools wheel
 
 pip3 install \
 pipenv \
-cookiecutter
+cookiecutter \
+yapf
 
-npm install -g create-react-app
+npm install -g \
+create-react-app \
+js-beautify \
+remark
