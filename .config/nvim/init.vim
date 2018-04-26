@@ -75,4 +75,5 @@ command! E Explore
 nnoremap <leader>e :E<cr>
 let g:netrw_localrmdir='rm -r'
 
+" autoformat on save
 au BufWrite * :Autoformat
