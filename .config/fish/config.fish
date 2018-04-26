@@ -1,4 +1,5 @@
-set fish_greeting ""
+set -xg fish_greeting ""
+set -xg EDITOR nvim
 
 alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 
