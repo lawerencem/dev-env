@@ -23,7 +23,7 @@ elseif executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 nnoremap <leader>g :Ack! <cword> <cr>
-"nnoremap <leader>f :Ack!
+nnoremap <leader>f :Ack! 
 
 " autosave
 let g:auto_save = 1
@@ -54,7 +54,7 @@ nmap [h <Plug>GitGutterPrevHunk
 
 " settings
 set number
-set listchars=tab:▸-,trail:⊡ 
+set list listchars=tab:▸-,trail:⊡
 
 " fzf
 nnoremap <leader>o :GFiles<cr>
