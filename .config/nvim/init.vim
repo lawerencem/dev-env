@@ -55,6 +55,10 @@ nmap [h <Plug>GitGutterPrevHunk
 " settings
 set number
 set list listchars=tab:▸-,trail:⊡
+set colorcolumn=80
+set showmatch
+set incsearch ignorecase smartcase
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " fzf
 nnoremap <leader>o :GFiles<cr>
