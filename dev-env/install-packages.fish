@@ -73,6 +73,8 @@ python3 -m pip3 install --upgrade pip setuptools wheel
 pip3 install \
 pipenv \
 cookiecutter \
+pylint \
+flake8 \
 yapf
 
 npm install -g \
