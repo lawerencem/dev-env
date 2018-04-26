@@ -11,6 +11,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 " leader
@@ -18,12 +19,12 @@ let mapleader = "\<Space>"
 
 " ack.vim
 if executable('rg')
-  let g:ackprg = 'rg --vimgrep'
+    let g:ackprg = 'rg --vimgrep'
 elseif executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag --vimgrep'
 endif
 nnoremap <leader>g :Ack! <cword> <cr>
-nnoremap <leader>f :Ack! 
+nnoremap <leader>f :Ack!
 
 " autosave
 let g:auto_save = 1
@@ -71,3 +72,5 @@ nnoremap <leader>t :Tags<cr>
 command! E Explore
 nnoremap <leader>e :E<cr>
 let g:netrw_localrmdir='rm -r'
+
+au BufWrite * :Autoformat
