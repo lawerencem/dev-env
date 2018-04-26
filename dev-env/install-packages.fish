@@ -11,9 +11,11 @@ fzf \
 fasd \
 fd \
 watchman \
+ccze \
 git \
 python3 \
 node \
+autossh \
 heroku \
 clang-format
 
