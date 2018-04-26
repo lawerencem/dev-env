@@ -61,6 +61,7 @@ set colorcolumn=80
 set showmatch
 set incsearch ignorecase smartcase
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set noswapfile
 
 " fzf
 nnoremap <leader>o :GFiles<cr>
