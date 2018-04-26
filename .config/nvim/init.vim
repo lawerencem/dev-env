@@ -66,3 +66,8 @@ nnoremap <leader>a :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>l :Lines<cr>
 nnoremap <leader>t :Tags<cr>
+
+" netrw
+command! E Explore
+nnoremap <leader>e :E<cr>
+let g:netrw_localrmdir='rm -r'
