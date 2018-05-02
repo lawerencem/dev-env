@@ -24,8 +24,9 @@ if type -q fresco
 else
     curl https://raw.githubusercontent.com/masa0x80/fresco/master/install | fish
     exec fish -l
-    fresco fishgretel/fasd
 end
+
+fresco fishgretel/fasd
 
 # plug for neovim
 if test ! -e ~/.local/share/nvim/site/autoload/plug.vim
