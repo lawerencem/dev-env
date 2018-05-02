@@ -59,7 +59,6 @@ font-robotomono-nerd-font \
 font-robotomono-nerd-font-mono \
 font-sourcecodepro-nerd-font \
 font-sourcecodepro-nerd-font-mono \
-firefox \
 spectacle \
 slack \
 vnc-viewer \
