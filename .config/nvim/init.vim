@@ -19,9 +19,9 @@ let mapleader = "\<Space>"
 
 " ack.vim
 if executable('rg')
-	let g:ackprg = 'rg --vimgrep'
+    let g:ackprg = 'rg --vimgrep'
 elseif executable('ag')
-	let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag --vimgrep'
 endif
 nnoremap <leader>g :Ack! <cword> <cr>
 nnoremap <leader>f :Ack!
@@ -32,7 +32,7 @@ let g:auto_save_in_insert_mode = 0
 
 " style
 if (has("termguicolors"))
-	set termguicolors
+    set termguicolors
 endif
 colorscheme one
 set background=dark
@@ -61,6 +61,7 @@ set showmatch
 set incsearch ignorecase smartcase
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set noswapfile
+set nowrap
 
 " fzf
 nnoremap <leader>o :GFiles<cr>
@@ -81,10 +82,10 @@ au BufWrite * :Autoformat
 let vimDir = '$HOME/.config/nvim'
 let &runtimepath.=','.vimDir
 if has('persistent_undo')
-	let myUndoDir = expand(vimDir . '/undodir')
-	call system('mkdir ' . vimDir)
-	call system('mkdir ' . myUndoDir)
-	let &undodir = myUndoDir
-	set undofile
+    let myUndoDir = expand(vimDir . '/undodir')
+    call system('mkdir ' . vimDir)
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
 endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
