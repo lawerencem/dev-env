@@ -91,3 +91,6 @@ if has('persistent_undo')
     set undofile
 endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
+
+" use system clipboard
+set clipboard=unnamed
