@@ -65,7 +65,7 @@ set nowrap
 
 " fzf
 nnoremap <leader>o :GFiles<cr>
-nnoremap <leader>a :GFiles?<cr>
+nnoremap <leader>c :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>l :Lines<cr>
 nnoremap <leader>t :Tags<cr>
@@ -77,6 +77,8 @@ let g:netrw_localrmdir='rm -r'
 
 " autoformat on save
 au BufWrite * :Autoformat
+nnoremap <leader>ae :au BufWrite * :Autoformat<cr>
+nnoremap <leader>ad :au! BufWrite<cr>
 
 " undotree saves to undo dir and add shortcut
 let vimDir = '$HOME/.config/nvim'
