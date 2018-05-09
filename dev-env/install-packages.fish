@@ -5,6 +5,7 @@ brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
 
 brew install \
 wemux \
+reattach-to-user-namespace \
 neovim \
 ripgrep-bin \
 fzf \
