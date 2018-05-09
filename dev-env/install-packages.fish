@@ -68,8 +68,6 @@ flux \
 licecap \
 visual-studio-code
 
-#brow # to sync bookmarks between browsers
-
 python3 -m pip3 install --upgrade pip setuptools wheel
 
 pip3 install \
