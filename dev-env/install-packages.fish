@@ -66,6 +66,7 @@ vnc-viewer \
 amazon-drive \
 flux \
 licecap \
+dash \
 visual-studio-code
 
 python3 -m pip3 install --upgrade pip setuptools wheel
