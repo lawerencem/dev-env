@@ -83,4 +83,4 @@ yapf
 npm install -g \
 create-react-app \
 js-beautify \
-remark
+remark-cli

@@ -24,6 +24,9 @@ end
 function devon
     ssh -Y jiv52755@gar62155-ubuntu
 end
+function shawn
+    ssh -Y jiv52755@ger-snicholson
+end
 function catan
     ssh -Y jiv52755@ger-catan
 end
