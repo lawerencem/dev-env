@@ -75,6 +75,8 @@ nnoremap <leader>t :Tags<cr>
 command! E Explore
 nnoremap <leader>e :E<cr>
 let g:netrw_localrmdir='rm -r'
+let g:netrw_banner="0"
+let g:netrw_sort_sequence=""
 
 " autoformat on save
 au BufWrite * :Autoformat
