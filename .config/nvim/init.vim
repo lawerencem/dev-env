@@ -13,6 +13,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
+Plug 'idanarye/vim-vebugger'
 call plug#end()
 
 " leader
