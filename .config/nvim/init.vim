@@ -79,9 +79,9 @@ let g:netrw_banner="0"
 let g:netrw_sort_sequence=""
 
 " autoformat on save
-au BufWrite * :Autoformat
 nnoremap <leader>ae :au BufWrite * :Autoformat<cr>
 nnoremap <leader>ad :au! BufWrite<cr>
+nnoremap <leader>af :Autoformat<cr>
 
 " undotree saves to undo dir and add shortcut
 let vimDir = '$HOME/.config/nvim'
