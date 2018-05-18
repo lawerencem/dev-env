@@ -1,9 +1,10 @@
-let pluginstall=system("[ -e ~/.local/share/nvim/site/autoload/plug.vim ] ; echo $?")
+let pluginstall=system("test -e ~/.local/share/nvim/site/autoload/plug.vim; echo $status")
 if pluginstall != 0
-    call system("curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim")
-    so ~/.local/share/nvim/site/autoload/plug.vim
+    call system("curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim")
+    so "~/.local/share/nvim/site/autoload/plug.vim"
 endif
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'rakr/vim-one'
