@@ -54,6 +54,9 @@ if test ! (grep kern.maxfilesperproc=1048576 /etc/sysctl.conf)
     sudo fish -c 'echo kern.maxfilesperproc=1048576 >> /etc/sysctl.conf'
 end
 
+# tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 brew cask install \
 iterm2 \
 font-robotomono-nerd-font \
