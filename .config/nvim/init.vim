@@ -2,7 +2,7 @@ let pluginstall=system("test -e ~/.local/share/nvim/site/autoload/plug.vim; echo
 if pluginstall != 0
     call system("curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim")
-    so "~/.local/share/nvim/site/autoload/plug.vim"
+    so ~/.local/share/nvim/site/autoload/plug.vim
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -22,6 +22,10 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
 Plug 'idanarye/vim-vebugger'
 call plug#end()
+
+if pluginstall != 0
+    :PlugInstall
+endif
 
 " leader
 let mapleader = "\<Space>"
