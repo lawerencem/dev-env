@@ -6,20 +6,21 @@ if pluginstall != 0
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'tpope/vim-sensible'
 Plug 'sheerun/vim-polyglot'
 Plug 'rakr/vim-one'
 Plug 'itchyny/lightline.vim'
-Plug 'djoshea/vim-autoread'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
+Plug 'wincent/ferret'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
+Plug 'neomake/neomake'
 Plug 'idanarye/vim-vebugger'
 call plug#end()
 
@@ -29,15 +30,6 @@ endif
 
 " leader
 let mapleader = "\<Space>"
-
-" ack.vim
-if executable('rg')
-    let g:ackprg = 'rg --vimgrep'
-elseif executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-endif
-nnoremap <leader>g :Ack! <cword> <cr>
-nnoremap <leader>f :Ack!
 
 " autosave
 let g:auto_save = 1
@@ -73,6 +65,7 @@ set colorcolumn=80
 set showmatch
 set incsearch ignorecase smartcase
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+filetype plugin indent off
 set noswapfile
 set nowrap
 
@@ -91,9 +84,9 @@ let g:netrw_banner="0"
 let g:netrw_sort_sequence=""
 
 " autoformat on save
-nnoremap <leader>ae :au BufWrite * :Autoformat<cr>
-nnoremap <leader>ad :au! BufWrite<cr>
-nnoremap <leader>af :Autoformat<cr>
+nnoremap <leader>fe :au BufWrite * :Autoformat<cr>
+nnoremap <leader>fd :au! BufWrite<cr>
+nnoremap <leader>ff :Autoformat<cr>
 
 " undotree saves to undo dir and add shortcut
 let vimDir = '$HOME/.config/nvim'
