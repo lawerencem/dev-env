@@ -13,6 +13,7 @@ fd \
 watchman \
 ccze \
 git \
+golang \
 python3 \
 node \
 autossh \
