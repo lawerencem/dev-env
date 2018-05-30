@@ -74,6 +74,8 @@ flux \
 licecap \
 dash \
 docker \
+homebrew/cask-versions/java8 \
+android-sdk \
 visual-studio-code
 
 python3 -m pip3 install --upgrade pip setuptools wheel
