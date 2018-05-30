@@ -14,6 +14,8 @@ watchman \
 ccze \
 git \
 golang \
+ponyc \
+pony-stable \
 python3 \
 node \
 autossh \
