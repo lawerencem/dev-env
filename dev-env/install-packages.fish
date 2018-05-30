@@ -18,6 +18,7 @@ python3 \
 node \
 autossh \
 heroku \
+cmake \
 clang-format
 
 # fish fasd plugin
@@ -66,11 +67,13 @@ font-sourcecodepro-nerd-font \
 font-sourcecodepro-nerd-font-mono \
 spectacle \
 slack \
+gitter \
 vnc-viewer \
 amazon-drive \
 flux \
 licecap \
 dash \
+docker \
 visual-studio-code
 
 python3 -m pip3 install --upgrade pip setuptools wheel
