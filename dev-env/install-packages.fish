@@ -84,6 +84,7 @@ python3 -m pip3 install --upgrade pip setuptools wheel
 
 pip3 install \
 pipenv \
+virtualenv \
 cookiecutter \
 neovim \
 pylint \
