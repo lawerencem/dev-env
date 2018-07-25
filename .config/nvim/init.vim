@@ -22,6 +22,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
 Plug 'neomake/neomake'
 Plug 'idanarye/vim-vebugger'
+Plug 'dag/vim-fish'
 call plug#end()
 
 if pluginstall != 0
@@ -65,7 +66,6 @@ set colorcolumn=80
 set showmatch
 set incsearch ignorecase smartcase
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-filetype plugin indent off
 set noswapfile
 set nowrap
 
