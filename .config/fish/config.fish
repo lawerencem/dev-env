@@ -42,9 +42,6 @@ alias ......='cd ../../../../..'
 alias md='mkdir -p'
 alias rd=rmdir
 
-alias mv='mv -i'
-alias cp='cp -i'
-
 # neovim
 if type -q nvim
     alias vim=nvim
