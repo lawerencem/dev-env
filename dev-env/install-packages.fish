@@ -69,6 +69,7 @@ font-sourcecodepro-nerd-font \
 font-sourcecodepro-nerd-font-mono \
 spectacle \
 slack \
+discord \
 gitter \
 vnc-viewer \
 amazon-drive \
