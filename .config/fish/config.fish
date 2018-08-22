@@ -27,6 +27,9 @@ end
 function shawn
     ssh -Y jiv52755@ger-snicholson
 end
+function parth
+    ssh -Y jiv52755@ger72631
+end
 function catan
     ssh -Y jiv52755@ger-catan
 end
