@@ -72,6 +72,7 @@ slack \
 discord \
 gitter \
 vnc-viewer \
+amazon-music \
 amazon-drive \
 flux \
 licecap \
