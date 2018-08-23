@@ -79,6 +79,7 @@ licecap \
 dash \
 docker \
 homebrew/cask-versions/java8 \
+screencat \
 android-sdk \
 visual-studio-code
 
