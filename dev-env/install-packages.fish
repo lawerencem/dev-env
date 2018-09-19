@@ -62,6 +62,7 @@ end
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 brew cask install \
+evernote \
 iterm2 \
 font-robotomono-nerd-font \
 font-robotomono-nerd-font-mono \
