@@ -62,8 +62,9 @@ end
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 brew cask install \
-evernote \
+simplenote \
 iterm2 \
+font-lato \
 font-robotomono-nerd-font \
 font-robotomono-nerd-font-mono \
 font-sourcecodepro-nerd-font \
@@ -81,7 +82,6 @@ licecap \
 dash \
 docker \
 homebrew/cask-versions/java8 \
-screencat \
 android-sdk \
 visual-studio-code
 
