@@ -19,7 +19,6 @@ pony-stable \
 python3 \
 node \
 autossh \
-heroku \
 cmake \
 clang-format
 
