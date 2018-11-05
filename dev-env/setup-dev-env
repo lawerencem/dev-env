@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
+brew install git
 alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 echo ".dev-env.git" >> .gitignore
 git clone --bare git@github.com:kjivan/dev-env.git $HOME/.dev-env.git
