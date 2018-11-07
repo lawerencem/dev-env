@@ -23,6 +23,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'neomake/neomake'
 Plug 'idanarye/vim-vebugger'
 Plug 'dag/vim-fish'
+Plug 'kergoth/vim-bitbake'
 call plug#end()
 
 if pluginstall != 0
