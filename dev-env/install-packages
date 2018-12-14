@@ -42,6 +42,9 @@ if test ! (grep $USER /usr/local/etc/wemux.conf)
     sed -i '' "s/brew/$USER/" /usr/local/etc/wemux.conf
 end
 
+# tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # fzf
 if test ! (grep fzf_key_bindings $HOME/.config/fish/functions/fish_user_key_bindings.fish)
     yes | sh (brew --prefix)/opt/fzf/install
@@ -56,9 +59,6 @@ if test ! (grep kern.maxfilesperproc=1048576 /etc/sysctl.conf)
     sudo sysctl -w kern.maxfilesperproc=1048576
     sudo fish -c 'echo kern.maxfilesperproc=1048576 >> /etc/sysctl.conf'
 end
-
-# tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 brew cask install \
 google-chrome \
