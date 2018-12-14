@@ -1,4 +1,4 @@
-function scc-in-place
+function scc-recursive
     set files (find "$argv")
 
     for file in $files
