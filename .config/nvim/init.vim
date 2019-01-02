@@ -25,6 +25,7 @@ Plug 'neomake/neomake'
 Plug 'idanarye/vim-vebugger'
 Plug 'dag/vim-fish'
 Plug 'kergoth/vim-bitbake'
+Plug 'elmcast/elm-vim'
 call plug#end()
 
 if pluginstall != 0
@@ -67,9 +68,12 @@ set list listchars=tab:▸-,trail:⊡
 set colorcolumn=80
 set showmatch
 set incsearch ignorecase smartcase
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set noswapfile
 set nowrap
+
+filetype plugin on
+autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
+autocmd FileType elm setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " fzf
 nnoremap <leader>o :GFiles<cr>
@@ -77,6 +81,9 @@ nnoremap <leader>c :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>l :Lines<cr>
 nnoremap <leader>t :Tags<cr>
+
+" elm
+let g:elm_setup_keybindings = 0
 
 " netrw
 command! E Explore
