@@ -79,8 +79,6 @@ autocmd FileType elm setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 nnoremap <leader>o :GFiles<cr>
 nnoremap <leader>c :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
-nnoremap <leader>l :Lines<cr>
-nnoremap <leader>t :Tags<cr>
 
 " elm
 let g:elm_setup_keybindings = 0
