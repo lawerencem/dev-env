@@ -9,5 +9,3 @@
 	submoduleSummary = true
 [diff]
 	submodule = log
-[color]
-	ui = auto
