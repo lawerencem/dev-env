@@ -14,10 +14,10 @@ watchman \
 ccze \
 git \
 golang \
-ponyc \
-pony-stable \
+elm \
 python3 \
 node \
+exercism \
 autossh \
 cmake \
 clang-format
