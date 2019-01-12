@@ -57,3 +57,5 @@ if type -q fasd
 end
 
 alias g='git'
+
+set -gx PATH $PATH /usr/local/go/bin $HOME/.cargo/bin
