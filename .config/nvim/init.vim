@@ -26,6 +26,7 @@ Plug 'idanarye/vim-vebugger'
 Plug 'dag/vim-fish'
 Plug 'kergoth/vim-bitbake'
 Plug 'elmcast/elm-vim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 if pluginstall != 0
