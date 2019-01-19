@@ -27,6 +27,7 @@ Plug 'dag/vim-fish'
 Plug 'kergoth/vim-bitbake'
 Plug 'elmcast/elm-vim'
 Plug 'rust-lang/rust.vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 if pluginstall != 0
