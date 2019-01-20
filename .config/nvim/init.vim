@@ -28,6 +28,7 @@ Plug 'kergoth/vim-bitbake'
 Plug 'elmcast/elm-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 if pluginstall != 0
@@ -108,6 +109,9 @@ if has('persistent_undo')
     set undofile
 endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
+
+" you complete me
+let g:ycm_rust_src_path = '$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src/'
 
 " use system clipboard
 set clipboard=unnamed
