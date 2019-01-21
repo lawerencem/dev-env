@@ -110,6 +110,11 @@ if has('persistent_undo')
 endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
 
+" ale
+let g:ale_linters = {
+\   'cpp': ['cpplint', 'cppcheck'],
+\}
+
 " you complete me
 let g:ycm_rust_src_path = '$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src/'
 
