@@ -10,10 +10,11 @@
 [diff]
 	submodule = log
 [alias]
-	co = checkout --patch
+	co = checkout
+	cop = checkout --patch
 	rb = rebase -i
 	ad = add --patch
-	ci = commit
+	cm = commit
 	st = status
 	br = branch
 	graph = log --graph --decorate --oneline --simplify-by-decoration
