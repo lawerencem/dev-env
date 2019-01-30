@@ -1,6 +1,7 @@
 set -xg fish_greeting ""
 set -xg VISUAL nvim
 set -xg EDITOR $VISUAL
+set -xg GIT_EDITOR $VISUAL
 
 alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 

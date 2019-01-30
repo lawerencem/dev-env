@@ -61,7 +61,7 @@ nnoremap <leader>q :q<CR>
 nmap <silent> <leader>/ :nohlsearch<cr>
 
 " git gutter
-let g:gitgutter_highlight_lines = 0
+let g:gitgutter_highlight_lines = 1
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
@@ -73,6 +73,7 @@ set showmatch
 set incsearch ignorecase smartcase
 set noswapfile
 set nowrap
+set shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 
 filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
@@ -109,6 +110,11 @@ if has('persistent_undo')
     set undofile
 endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
+
+" ale
+let g:ale_linters = {
+\   'cpp': ['cpplint', 'cppcheck'],
+\}
 
 " you complete me
 let g:ycm_rust_src_path = '$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src/'
