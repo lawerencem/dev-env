@@ -1,1 +1,1 @@
-[[ $- == *i* ]] && elvish
+[[ $- == *i* ]] && $HOME/go/bin/elvish
