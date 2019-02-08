@@ -61,6 +61,7 @@ alias g='git'
 
 if test -d /usr/local/go/bin
     set -gx PATH $PATH /usr/local/go/bin
+    set -gx GOPATH $HOME/go
 end
 if test -d $HOME/.cargo/bin
     set -gx PATH $PATH $HOME/.cargo/bin
