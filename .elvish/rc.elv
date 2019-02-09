@@ -4,30 +4,24 @@ E:GIT_EDITOR = $E:EDITOR
 E:PATH = $E:PATH":"$E:HOME"/.cargo/bin:/usr/local/go/bin:"$E:HOME"/go/bin"
 E:GOPATH = ""$E:HOME"/go"
 
-use epm
-epm:install &silent-if-installed=$true   \
-  github.com/zzamboni/elvish-modules     \
-  github.com/zzamboni/elvish-completions \
-  github.com/xiaq/edit.elv               \
-  github.com/muesli/elvish-libs          \
-  github.com/iwoloschin/elvish-packages
-
 use re
 use readline-binding
+
+use epm
+epm:install &silent-if-installed=$true   \
+  github.com/zzamboni/elvish-completions \
+  github.com/xiaq/edit.elv               \
+  github.com/muesli/elvish-libs
+
 use github.com/xiaq/edit.elv/smart-matcher
 smart-matcher:apply
+
 use github.com/zzamboni/elvish-completions/cd
 use github.com/zzamboni/elvish-completions/ssh
 use github.com/zzamboni/elvish-completions/builtins
-#use github.com/zzamboni/elvish-completions/git
-#git:git-command = hub
-#git:init
-use github.com/zzamboni/elvish-modules/long-running-notifications
-use github.com/zzamboni/elvish-modules/bang-bang
 
-use github.com/zzamboni/elvish-modules/dir
-fn cd [@a]{ dir:cd $@a }
-fn cdb [@a]{ dir:cdb $@a }
+edit:insert:binding[Ctrl-o] = $edit:location:start~
+edit:insert:binding[Ctrl-n] = $edit:navigation:start~
 
 fn dg [@a]{ git --git-dir=$E:HOME/.dev-env.git/ --work-tree=$E:HOME $@a }
 
@@ -45,7 +39,23 @@ fn ll [@a]{ e:exa --long $@a }
 fn ls [@a]{ e:ls --color=auto $@a }
 fn vi [@a]{ nvim $@a }
 fn vim [@a]{ nvim $@a }
+
+# git
+#use github.com/zzamboni/elvish-completions/git
+#git:git-command = hub
+#git:init
 fn g [@a]{ git $@a }
+fn gs [@a]{ git status -s $@a }
+fn gco [@a]{ git checkout $@a }
+fn gcp [@a]{ git checkout --patch $@a }
+fn gr [@a]{ git rebase -i $@a }
+fn ga [@a]{ git add -p $@a }
+fn gcm [@a]{ git commit $@a }
+fn gb [@a]{ git branch $@a }
+fn gg [@a]{ git branch $@a }
+fn gfg [@a]{ git branch $@a }
+fn gg [@a]{ git log --graph --decorate --oneline --simplify-by-decoration}
+fn gg [@a]{ git log --all --graph --decorate --oneline --simplify-by-decoration}
 
 fn cppdirswatch [@a]{
     watchman-make -p \

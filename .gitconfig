@@ -9,13 +9,3 @@
 	submoduleSummary = true
 [diff]
 	submodule = log
-[alias]
-	co = checkout
-	cop = checkout --patch
-	rb = rebase -i
-	ad = add --patch
-	cm = commit
-	st = status
-	br = branch
-	graph = log --graph --decorate --oneline --simplify-by-decoration
-	full-graph = log --all --graph --decorate --oneline --simplify-by-decoration
