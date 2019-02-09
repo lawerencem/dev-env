@@ -7,8 +7,8 @@ brew install \
 wemux \
 neovim \
 ripgrep-bin \
+exa \
 fzf \
-fasd \
 fd \
 watchman \
 ccze \
@@ -21,15 +21,6 @@ exercism \
 autossh \
 cmake \
 clang-format
-
-# fish fasd plugin
-if type -q fresco
-else
-    curl https://raw.githubusercontent.com/masa0x80/fresco/master/install | fish
-    exec fish -l
-end
-
-fresco fishgretel/fasd
 
 # plug for neovim
 if test ! -e ~/.local/share/nvim/site/autoload/plug.vim
@@ -65,8 +56,7 @@ google-chrome \
 simplenote \
 iterm2 \
 font-lato \
-font-robotomono-nerd-font \
-font-robotomono-nerd-font-mono \
+font-open-sans \
 font-sourcecodepro-nerd-font \
 font-sourcecodepro-nerd-font-mono \
 spectacle \
@@ -77,12 +67,9 @@ gitter \
 vnc-viewer \
 amazon-music \
 flux \
-licecap \
 dash \
 docker \
-homebrew/cask-versions/java8 \
-android-sdk \
-visual-studio-code
+homebrew/cask-versions/java8
 
 python3 -m pip3 install --upgrade pip setuptools wheel
 
