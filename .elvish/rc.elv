@@ -20,7 +20,9 @@ use github.com/zzamboni/elvish-completions/cd
 use github.com/zzamboni/elvish-completions/ssh
 use github.com/zzamboni/elvish-completions/builtins
 
-edit:insert:binding[Ctrl-f] = $edit:location:start~
+edit:insert:binding[Ctrl-b] = $edit:move-dot-left-word~
+edit:insert:binding[Ctrl-f] = $edit:move-dot-right-word~
+edit:insert:binding[Ctrl-g] = $edit:location:start~
 edit:insert:binding[Ctrl-n] = $edit:navigation:start~
 
 fn dg [@a]{ git --git-dir=$E:HOME/.dev-env.git/ --work-tree=$E:HOME $@a }
