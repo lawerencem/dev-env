@@ -36,7 +36,6 @@ fn catan [@a]{ ssh -Y jiv52755@ger-catan $@a }
 fn grep [@a]{ e:grep --color=auto $@a }
 fn l [@a]{ e:exa $@a }
 fn ll [@a]{ e:exa --long $@a }
-fn ls [@a]{ e:ls --color=auto $@a }
 fn vi [@a]{ nvim $@a }
 fn vim [@a]{ nvim $@a }
 
