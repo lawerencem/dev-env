@@ -22,6 +22,9 @@ autossh \
 cmake \
 clang-format
 
+# rust
+curl https://sh.rustup.rs -sSf | sh
+
 # plug for neovim
 if test ! -e ~/.local/share/nvim/site/autoload/plug.vim
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
