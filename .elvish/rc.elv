@@ -1,7 +1,7 @@
 E:VISUAL = nvim
 E:EDITOR = $E:VISUAL
 E:GIT_EDITOR = $E:EDITOR
-E:PATH = $E:PATH":"$E:HOME"/.cargo/bin:/usr/local/go/bin:"$E:HOME"/go/bin"
+E:PATH = /usr/local/bin:$E:PATH":/opt/X11/bin:"$E:HOME"/.cargo/bin:/usr/local/go/bin:"$E:HOME"/go/bin"
 E:GOPATH = ""$E:HOME"/go"
 
 use re
@@ -52,10 +52,8 @@ fn gr [@a]{ git rebase -i $@a }
 fn ga [@a]{ git add -p $@a }
 fn gcm [@a]{ git commit $@a }
 fn gb [@a]{ git branch $@a }
-fn gg [@a]{ git branch $@a }
-fn gfg [@a]{ git branch $@a }
 fn gg [@a]{ git log --graph --decorate --oneline --simplify-by-decoration}
-fn gg [@a]{ git log --all --graph --decorate --oneline --simplify-by-decoration}
+fn gfg [@a]{ git log --all --graph --decorate --oneline --simplify-by-decoration}
 
 fn cppdirswatch [@a]{
     watchman-make -p \
