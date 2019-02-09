@@ -20,6 +20,7 @@ fn ll [@a]{ e:exa --long $@a }
 fn ls [@a]{ e:ls --color=auto $@a }
 fn vi [@a]{ nvim $@a }
 fn vim [@a]{ nvim $@a }
+fn g [@a]{ git $@a }
 
 fn cppdirswatch [@a]{
     watchman-make -p \
