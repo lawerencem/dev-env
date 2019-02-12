@@ -1,7 +1,7 @@
 E:VISUAL = nvim
 E:EDITOR = $E:VISUAL
 E:GIT_EDITOR = $E:EDITOR
-E:PATH = /usr/local/bin:$E:PATH":/opt/X11/bin:"$E:HOME"/.cargo/bin:/usr/local/go/bin:"$E:HOME"/go/bin"
+E:PATH = /usr/local/bin:$E:PATH":/opt/X11/bin:"$E:HOME"/.cargo/bin:/usr/local/go/bin:"$E:HOME"/go/bin:"$E:HOME"/.fzf/bin"
 E:GOPATH = ""$E:HOME"/go"
 
 use re
