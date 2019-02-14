@@ -55,7 +55,7 @@ fn gcm [@a]{ git commit $@a }
 fn gb [@a]{ git branch $@a }
 fn gpl [@a]{ git pull $@a }
 fn gps [@a]{ git push $@a }
-fn gl [@a]{ git log @a }
+fn gl [@a]{ git log $@a }
 fn gg [@a]{ git log --graph --decorate --oneline --simplify-by-decoration}
 fn gfg [@a]{ git log --all --graph --decorate --oneline --simplify-by-decoration}
 
