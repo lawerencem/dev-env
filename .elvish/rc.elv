@@ -42,7 +42,7 @@ fn vi [@a]{ nvim $@a }
 fn vim [@a]{ nvim $@a }
 
 # git
-#use github.com/zzamboni/elvish-completions/git
+use github.com/zzamboni/elvish-completions/git
 #git:git-command = hub
 #git:init
 fn g [@a]{ git $@a }
@@ -58,6 +58,11 @@ fn gps [@a]{ git push $@a }
 fn gl [@a]{ git log $@a }
 fn gg [@a]{ git log --graph --decorate --oneline --simplify-by-decoration}
 fn gfg [@a]{ git log --all --graph --decorate --oneline --simplify-by-decoration}
+
+# python virtualenv
+use github.com/iwoloschin/elvish-packages/python
+fn activate [@a]{ python:activate $@a }
+fn deactivate { python:deactivate }
 
 fn cppdirswatch [@a]{
     watchman-make -p \
