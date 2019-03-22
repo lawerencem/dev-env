@@ -20,7 +20,8 @@ node \
 exercism \
 autossh \
 cmake \
-clang-format
+clang-format \
+gradle
 
 # rust
 curl https://sh.rustup.rs -sSf | sh
