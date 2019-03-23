@@ -8,9 +8,10 @@ use re
 use readline-binding
 
 use epm
-epm:install &silent-if-installed=$true   \
+epm:install &silent-if-installed=$true \
   github.com/zzamboni/elvish-completions \
-  github.com/xiaq/edit.elv               \
+  github.com/zzamboni/elvish-packages \
+  github.com/xiaq/edit.elv \
   github.com/muesli/elvish-libs
 
 use github.com/xiaq/edit.elv/smart-matcher
