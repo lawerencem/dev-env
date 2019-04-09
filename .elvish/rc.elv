@@ -1,8 +1,26 @@
 E:VISUAL = nvim
 E:EDITOR = $E:VISUAL
 E:GIT_EDITOR = $E:EDITOR
-E:PATH = /usr/local/bin:$E:PATH":/opt/X11/bin:"$E:HOME"/.cargo/bin:/usr/local/go/bin:"$E:HOME"/go/bin:"$E:HOME"/.fzf/bin"
+
+# Homebrew
+E:PATH = "/usr/local/bin:"$E:PATH
+
+# Xquartz
+E:PATH = $E:PATH":/opt/X11/bin:"
+
+# Rust
+E:PATH = $E:PATH":"$E:HOME"/.cargo/bin"
+
+# Go
+E:PATH = $E:PATH":/usr/local/go/bin:"$E:HOME"/go/bin:"
 E:GOPATH = ""$E:HOME"/go"
+
+# Ruby
+E:PATH = "/usr/local/opt/ruby/bin:"$E:HOME"/gems/bin:"$E:PATH
+E:GEM_HOME = ""$E:HOME"/gems"
+
+# Fzf
+E:PATH = $E:PATH":"$E:HOME"/.fzf/bin"
 
 use re
 use readline-binding
@@ -94,4 +112,3 @@ fn cppwatch [@a]{
 fn pywatch [@a]{
     watchman-make -p '**/*.py' --run $@a
 }
-
