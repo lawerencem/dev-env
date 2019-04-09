@@ -10,7 +10,7 @@ use readline-binding
 use epm
 epm:install &silent-if-installed=$true \
   github.com/zzamboni/elvish-completions \
-  github.com/zzamboni/elvish-packages \
+  github.com/iwoloschin/elvish-packages \
   github.com/xiaq/edit.elv \
   github.com/muesli/elvish-libs
 
