@@ -46,14 +46,6 @@ edit:insert:binding[Ctrl-n] = $edit:navigation:start~
 
 fn dg [@a]{ git --git-dir=$E:HOME/.dev-env.git/ --work-tree=$E:HOME $@a }
 
-fn kavi [@a]{ ssh -Y jiv52755@kjivan $@a }
-fn abby [@a]{ ssh -Y jiv52755@absegar $@a }
-fn alex [@a]{ ssh -Y jiv52755@ger-tor59451-linux-1 $@a }
-fn devon [@a]{ ssh -Y jiv52755@gar62155-ubuntu $@a }
-fn shawn [@a]{ ssh -Y jiv52755@ger-snicholson $@a }
-fn parth [@a]{ ssh -Y jiv52755@ger72631 $@a }
-fn catan [@a]{ ssh -Y jiv52755@ger-catan $@a }
-
 fn grep [@a]{ e:grep --color=auto $@a }
 fn l [@a]{ e:exa $@a }
 fn ll [@a]{ e:exa --long $@a }
