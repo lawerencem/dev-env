@@ -32,11 +32,6 @@ if test ! -e ~/.local/share/nvim/site/autoload/plug.vim
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 end
 
-# wemux
-if test ! (grep $USER /usr/local/etc/wemux.conf)
-    sed -i '' "s/brew/$USER/" /usr/local/etc/wemux.conf
-end
-
 # tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
