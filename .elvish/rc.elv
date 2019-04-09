@@ -4,6 +4,7 @@ E:GIT_EDITOR = $E:EDITOR
 
 # Homebrew
 E:PATH = "/usr/local/bin:"$E:PATH
+E:PATH = "/home/linuxbrew/.linuxbrew/bin:"$E:PATH
 
 # Xquartz
 E:PATH = $E:PATH":/opt/X11/bin:"
