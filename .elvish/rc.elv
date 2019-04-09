@@ -4,7 +4,14 @@ E:GIT_EDITOR = $E:EDITOR
 
 # Homebrew
 E:PATH = "/usr/local/bin:"$E:PATH
-E:PATH = "/home/linuxbrew/.linuxbrew/bin:"$E:PATH
+
+E:HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+E:HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
+E:HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
+E:PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:"$E:PATH
+E:MANPATH="/home/linuxbrew/.linuxbrew/share/man:"$E:MANPATH
+E:INFOPATH="/home/linuxbrew/.linuxbrew/share/info:"$E:INFOPATH
+
 
 # Xquartz
 E:PATH = $E:PATH":/opt/X11/bin:"
@@ -54,7 +61,7 @@ fn vi [@a]{ nvim $@a }
 fn vim [@a]{ nvim $@a }
 
 # git
-use github.com/zzamboni/elvish-completions/git
+#use github.com/zzamboni/elvish-completions/git
 #git:git-command = hub
 #git:init
 fn g [@a]{ git $@a }
