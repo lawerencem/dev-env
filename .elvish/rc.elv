@@ -95,16 +95,3 @@ fn pywatch [@a]{
     watchman-make -p '**/*.py' --run $@a
 }
 
-fn scc-recursive [@a]{
-    files = (find "$argv")
-
-    echo $files
-#    for file $files {
-#        if string match -r -q '\.h$|\.c$|\.cpp$|\.inl$' $file {
-#            scc $file > $file.scc
-#            mv $file.scc $file
-#        }
-#    }
-}
-
-
