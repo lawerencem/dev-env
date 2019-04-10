@@ -30,6 +30,7 @@ Plug 'elmcast/elm-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 if pluginstall != 0
