@@ -31,6 +31,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe'
 Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'Quramy/tsuquyomi'
 call plug#end()
 
 if pluginstall != 0
