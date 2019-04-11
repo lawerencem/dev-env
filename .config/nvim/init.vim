@@ -88,6 +88,10 @@ nnoremap <leader>o :GFiles<cr>
 nnoremap <leader>c :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 
+" js
+"autocmd FileType typescript JsPreTmpl html
+"autocmd FileType typescript syn clear foldBraces
+
 " elm
 let g:elm_setup_keybindings = 0
 
