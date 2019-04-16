@@ -33,6 +33,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'Quramy/tsuquyomi'
+Plug 'Shougo/vimproc.vim'
 call plug#end()
 
 if pluginstall != 0
