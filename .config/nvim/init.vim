@@ -32,8 +32,6 @@ Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
-Plug 'Quramy/tsuquyomi'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 call plug#end()
 
 if pluginstall != 0
