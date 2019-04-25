@@ -55,8 +55,15 @@ edit:insert:binding[Ctrl-n] = $edit:navigation:start~
 fn dg [@a]{ git --git-dir=$E:HOME/.dev-env.git/ --work-tree=$E:HOME $@a }
 
 fn grep [@a]{ e:grep --color=auto $@a }
-fn l [@a]{ e:exa $@a }
-fn ll [@a]{ e:exa --long $@a }
+fn l [@a]{ exa $@a }
+fn ls [@a]{
+    if ?(search-external exa > /dev/null) {
+        exa $@a
+    } else {
+        e:ls --color $@a
+    }
+}
+fn ll [@a]{ exa --long $@a }
 fn vi [@a]{ nvim $@a }
 fn vim [@a]{ nvim $@a }
 
