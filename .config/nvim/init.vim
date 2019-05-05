@@ -118,10 +118,12 @@ let g:ale_completion_enabled = 1
 nnoremap <leader>d :ALEGoToDefinition<cr>
 nnoremap <leader>r :ALEFindReferences<cr>
 nnoremap <leader>h :ALEHover<cr>
+nnoremap <leader>fx :ALEFix<cr>
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint', 'tslint', 'prettier'],
+\   'typescript': ['eslint', 'tslint', 'prettier'],
 \}
 
 " use system clipboard
