@@ -29,7 +29,6 @@ Plug 'kergoth/vim-bitbake'
 Plug 'elmcast/elm-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
-Plug 'Valloric/YouCompleteMe'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
 call plug#end()
@@ -87,10 +86,6 @@ nnoremap <leader>o :GFiles<cr>
 nnoremap <leader>c :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
 
-" js
-"autocmd FileType typescript JsPreTmpl html
-"autocmd FileType typescript syn clear foldBraces
-
 " elm
 let g:elm_setup_keybindings = 0
 
@@ -119,12 +114,15 @@ endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
 
 " ale
-let g:ale_linters = {
-\   'cpp': ['cpplint', 'cppcheck'],
-\}
+let g:ale_completion_enabled = 1
+nnoremap <leader>d :ALEGoToDefinition<cr>
+nnoremap <leader>r :ALEFindReferences<cr>
+nnoremap <leader>h :ALEHover<cr>
 
-" you complete me
-let g:ycm_rust_src_path = '$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src/'
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint', 'tslint', 'prettier'],
+\}
 
 " use system clipboard
 set clipboard=unnamed
