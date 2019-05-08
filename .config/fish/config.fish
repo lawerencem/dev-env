@@ -13,30 +13,15 @@ function grep
     command grep --color=auto $argv
 end
 
-function kavi
-    ssh -Y jiv52755@kjivan
+if type -q exa
+    alias l='exa'
+    alias ls='exa'
+    alias ll='exa -l'
+else
+    alias l='ls --color'
+    alias ls='ls --color'
+    alias ll='ls --color -l'
 end
-function abby
-    ssh -Y jiv52755@absegar
-end
-function alex
-    ssh -Y jiv52755@ger-tor59451-linux-1
-end
-function devon
-    ssh -Y jiv52755@gar62155-ubuntu
-end
-function shawn
-    ssh -Y jiv52755@ger-snicholson
-end
-function parth
-    ssh -Y jiv52755@ger72631
-end
-function catan
-    ssh -Y jiv52755@ger-catan
-end
-
-
-alias l='ls -lah'
 
 alias ...='cd ../..'
 alias ....='cd ../../..'
