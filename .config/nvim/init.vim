@@ -122,6 +122,8 @@ nnoremap <leader>fx :ALEFix<cr>
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'scss': ['prettier'],
+\   'html': ['prettier'],
 \   'javascript': ['eslint', 'tslint', 'prettier'],
 \   'typescript': ['eslint', 'tslint', 'prettier'],
 \}
