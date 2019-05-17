@@ -31,6 +31,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
+Plug 'chrisbra/Colorizer'
 call plug#end()
 
 if pluginstall != 0
