@@ -39,8 +39,11 @@ if type -q nvim
 end
 
 alias g='git'
+
 alias c='cd (fd -t d | fzf)'
+alias ch='cd (fd --search-path $HOME -t d | fzf)'
 alias v='nvim (fd | fzf)'
+alias vh='nvim (fd --search-path $HOME | fzf)'
 
 if test -d /home/linuxbrew/.linuxbrew/bin
     set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
