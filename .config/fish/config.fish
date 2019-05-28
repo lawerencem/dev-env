@@ -1,3 +1,4 @@
+#!/usr/bin/env fish
 set -xg fish_greeting ""
 set -xg VISUAL nvim
 set -xg EDITOR $VISUAL
@@ -43,6 +44,8 @@ if type -q fasd
 end
 
 alias g='git'
+alias c='cd (fd -t d | fzf)'
+alias v='nvim (fd | fzf)'
 
 if test -d /usr/local/go/bin
     set -gx PATH $PATH /usr/local/go/bin
