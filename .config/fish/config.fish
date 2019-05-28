@@ -42,18 +42,18 @@ alias g='git'
 alias c='cd (fd -t d | fzf)'
 alias v='nvim (fd | fzf)'
 
+if test -d /home/linuxbrew/.linuxbrew/bin
+    set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
+end
+if test -d /home/linuxbrew/.linuxbrew/sbin
+    set -gx PATH /home/linuxbrew/.linuxbrew/sbin $PATH
+end
 if test -d /usr/local/go/bin
     set -gx PATH $PATH /usr/local/go/bin
     set -gx GOPATH $HOME/go
 end
 if test -d $HOME/.cargo/bin
     set -gx PATH $PATH $HOME/.cargo/bin
-end
-if test -d /home/linuxbrew/.linuxbrew/bin
-    set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
-end
-if test -d /home/linuxbrew/.linuxbrew/sbin
-    set -gx PATH /home/linuxbrew/.linuxbrew/sbin $PATH
 end
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
