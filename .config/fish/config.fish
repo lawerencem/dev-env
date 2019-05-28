@@ -38,11 +38,6 @@ if type -q nvim
     alias vi=nvim
 end
 
-# fasd
-if type -q fasd
-    alias v='fasd -t -e vim -b viminfo'
-end
-
 alias g='git'
 alias c='cd (fd -t d | fzf)'
 alias v='nvim (fd | fzf)'
