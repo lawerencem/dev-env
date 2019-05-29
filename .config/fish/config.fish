@@ -50,4 +50,8 @@ else
     alias ll='ls --color -l'
 end
 
+if type -q bat
+    alias cat='bat'
+end
+
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
