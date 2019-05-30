@@ -52,6 +52,15 @@ end
 
 if type -q bat
     alias cat='bat'
+    alias b='bat'
 end
+
+if type -q ccze
+    function c
+        command cat $argv | ccze -A
+    end
+end
+
+alias gs="git status --short --branch"
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
