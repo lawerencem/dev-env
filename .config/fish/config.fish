@@ -59,8 +59,30 @@ if type -q ccze
     function c
         command cat $argv | ccze -A
     end
+    function t
+        command tail $argv | ccze -A
+    end
+    function tf
+        command tail -f $argv | ccze -A
+    end
 end
 
-alias gs="git status --short --branch"
+alias g='git'
+alias gs='git status --short --branch'
+alias gco='git checkout'
+alias gcop='git checkout --patch'
+alias gr='git reset'
+alias ga='git add'
+alias gap='git add --patch'
+alias gai='git add --interactive '
+alias grb='git rebase'
+alias grbi='git rebase --interactive'
+alias gc='git commit'
+alias gb='git branch'
+alias gpl='git pull'
+alias gps='git push'
+alias gl='git log'
+alias gg='git log --graph --decorate --oneline --simplify-by-decoration'
+alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
