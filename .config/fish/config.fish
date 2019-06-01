@@ -22,13 +22,8 @@ set -xg GIT_EDITOR $VISUAL
 
 alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 
-function reload
-    source ~/.config/fish/config.fish
-end
-
-function grep
-    command grep --color=auto $argv
-end
+alias reload="source $HOME/.config/fish/config.fish"
+alias edit="vi $HOME/.config/fish/config.fish"
 
 alias c='cd (fd -t d | fzf)'
 alias ch='cd (fd --search-path $HOME -t d | fzf)'
@@ -49,6 +44,8 @@ else
     alias ls='ls --color'
     alias ll='ls --color -l'
 end
+
+alias grep='command grep --color=auto'
 
 if type -q bat
     alias cat='bat'
