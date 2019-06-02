@@ -18,7 +18,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'ap/vim-css-color'
 
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'itchyny/lightline.vim'
 
 Plug 'djoshea/vim-autoread'
@@ -87,6 +87,7 @@ autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 autocmd FileType elm, javascript, typescript, css, scss, html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " fzf
+nnoremap <leader>p :Files<cr>
 nnoremap <leader>o :GFiles<cr>
 nnoremap <leader>c :GFiles?<cr>
 nnoremap <leader>b :Buffers<cr>
