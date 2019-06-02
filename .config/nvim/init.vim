@@ -21,7 +21,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'pangloss/vim-javascript'
-Plug 'neomake/neomake'
 Plug 'idanarye/vim-vebugger'
 Plug 'dag/vim-fish'
 Plug 'dmix/elvish.vim'
@@ -29,9 +28,10 @@ Plug 'kergoth/vim-bitbake'
 Plug 'elmcast/elm-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
+Plug 'lifepillar/vim-mucomplete'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
-Plug 'chrisbra/Colorizer'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 if pluginstall != 0
@@ -42,8 +42,10 @@ endif
 let mapleader = "\<Space>"
 
 " autosave
-let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
+nnoremap <leader>se :let g:auto_save = 1<cr>
+nnoremap <leader>sd :let g:auto_save = 0<cr>
+nnoremap <leader>ss :w<cr>
 
 " style
 if (has("termguicolors"))
@@ -81,7 +83,6 @@ set shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 autocmd FileType elm, javascript, typescript, css, scss, html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
-inoremap <C-Space> <C-x><C-o>
 
 " fzf
 nnoremap <leader>o :GFiles<cr>
