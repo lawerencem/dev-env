@@ -44,6 +44,7 @@ let mapleader = "\<Space>"
 
 " autosave
 let g:auto_save_in_insert_mode = 0
+let g:auto_save = 1
 nnoremap <leader>se :let g:auto_save = 1<cr>
 nnoremap <leader>sd :let g:auto_save = 0<cr>
 nnoremap <leader>ss :w<cr>
