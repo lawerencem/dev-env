@@ -97,11 +97,6 @@ let g:netrw_localrmdir='rm -r'
 let g:netrw_banner="0"
 let g:netrw_sort_sequence=""
 
-" autoformat on save
-nnoremap <leader>fe :au BufWrite * :Autoformat<cr>
-nnoremap <leader>fd :au! BufWrite<cr>
-nnoremap <leader>ff :Autoformat<cr>
-
 " undotree saves to undo dir and add shortcut
 let vimDir = '$HOME/.config/nvim'
 let &runtimepath.=','.vimDir
@@ -119,13 +114,17 @@ let g:ale_completion_enabled = 1
 nnoremap <leader>d :ALEGoToDefinition<cr>
 nnoremap <leader>r :ALEFindReferences<cr>
 nnoremap <leader>h :ALEHover<cr>
-nnoremap <leader>fx :ALEFix<cr>
+
+nnoremap <leader>fe :let g:ale_fix_on_save = 1<cr>
+nnoremap <leader>fd :let g:ale_fix_on_save = 0<cr>
+nnoremap <leader>ff :ALEFix<cr>
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'html': ['prettier'],
+\   'rust' : ['rustfmt'],
 \   'javascript': ['eslint', 'tslint', 'prettier'],
 \   'typescript': ['eslint', 'tslint', 'prettier'],
 \}
