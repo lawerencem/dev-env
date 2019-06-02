@@ -9,3 +9,5 @@ if [[ $- == *i* ]]; then
         exec /home/linuxbrew/.linuxbrew/bin/elvish
     fi
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
