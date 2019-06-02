@@ -7,9 +7,20 @@ endif
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
+
 Plug 'sheerun/vim-polyglot'
+Plug 'dag/vim-fish'
+Plug 'dmix/elvish.vim'
+Plug 'elmcast/elm-vim'
+Plug 'rust-lang/rust.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'ap/vim-css-color'
+
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
+
 Plug 'djoshea/vim-autoread'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'mbbill/undotree'
@@ -19,18 +30,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'wincent/ferret'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript'
 Plug 'idanarye/vim-vebugger'
-Plug 'dag/vim-fish'
-Plug 'dmix/elvish.vim'
-Plug 'kergoth/vim-bitbake'
-Plug 'elmcast/elm-vim'
-Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
 Plug 'lifepillar/vim-mucomplete'
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/vim-js-pretty-template'
-Plug 'ap/vim-css-color'
 call plug#end()
 
 if pluginstall != 0
