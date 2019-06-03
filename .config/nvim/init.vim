@@ -33,6 +33,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'idanarye/vim-vebugger'
 Plug 'w0rp/ale'
 Plug 'lifepillar/vim-mucomplete'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 if pluginstall != 0
@@ -124,6 +129,7 @@ nnoremap <leader>fe :let g:ale_fix_on_save = 1<cr>
 nnoremap <leader>fd :let g:ale_fix_on_save = 0<cr>
 nnoremap <leader>ff :ALEFix<cr>
 
+let g:ale_linters = {'rust': ['rls']}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'css': ['prettier'],
@@ -133,6 +139,11 @@ let g:ale_fixers = {
 \   'javascript': ['eslint', 'tslint', 'prettier'],
 \   'typescript': ['eslint', 'tslint', 'prettier'],
 \}
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<c-i>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " use system clipboard
 set clipboard=unnamed
