@@ -85,4 +85,6 @@ alias gl='git log --abbrev-commit --pretty=oneline'
 alias gg='git log --graph --decorate --oneline --simplify-by-decoration'
 alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
 
+alias diff='diff --color --ignore-space-change'
+
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
