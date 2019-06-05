@@ -135,6 +135,7 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'html': ['prettier'],
+\   'json': ['prettier'],
 \   'rust' : ['rustfmt'],
 \   'javascript': ['eslint', 'tslint', 'prettier'],
 \   'typescript': ['eslint', 'tslint', 'prettier'],
