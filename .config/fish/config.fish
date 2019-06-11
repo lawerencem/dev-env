@@ -53,7 +53,7 @@ if type -q bat
 end
 
 if type -q ccze
-    function c
+    function ca
         command cat $argv | ccze -A
     end
     function t
