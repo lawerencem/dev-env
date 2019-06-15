@@ -131,7 +131,11 @@ nnoremap <leader>fe :let g:ale_fix_on_save = 1<cr>
 nnoremap <leader>fd :let g:ale_fix_on_save = 0<cr>
 nnoremap <leader>ff :ALEFix<cr>
 
-let g:ale_linters = {'rust': ['rls']}
+let g:ale_linters = {
+\   'rust': ['rls'],
+\}
+
+
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'css': ['prettier'],
@@ -141,6 +145,7 @@ let g:ale_fixers = {
 \   'rust' : ['rustfmt'],
 \   'javascript': ['eslint', 'tslint', 'prettier'],
 \   'typescript': ['eslint', 'tslint', 'prettier'],
+\   'markdown': ['prettier'],
 \}
 
 " ultisnips
