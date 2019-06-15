@@ -13,6 +13,12 @@ end
 if test -d $HOME/.cargo/bin
     set -gx PATH $PATH $HOME/.cargo/bin
 end
+if test -d $HOME/cg1v-dev-tools
+    set -gx PATH $PATH $HOME/cg1v-dev-tools
+end
+if test -d $HOME/owf/apache-tomcat
+    set -gx TOMCAT_DIR $HOME/owf/apache-tomcat
+end
 
 set -xg fish_greeting ""
 
