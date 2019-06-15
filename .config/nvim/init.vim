@@ -31,6 +31,7 @@ Plug 'wincent/ferret'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'idanarye/vim-vebugger'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'w0rp/ale'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'mattn/emmet-vim'
@@ -86,6 +87,7 @@ set incsearch ignorecase smartcase
 set noswapfile
 set nowrap
 set shiftwidth=4 softtabstop=4 tabstop=4 expandtab
+set spell spelllang=en_us
 
 filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
