@@ -90,6 +90,7 @@ alias gds='git diff --staged'
 alias gl='git log --abbrev-commit --pretty=oneline'
 alias gg='git log --graph --decorate --oneline --simplify-by-decoration'
 alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
+alias gga='git log --graph --oneline --decorate --all'
 
 alias diff='diff --color --ignore-space-change'
 
