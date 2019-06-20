@@ -70,6 +70,8 @@ if type -q ccze
     end
 end
 
+alias diff='diff --color --ignore-space-change'
+
 alias g='git'
 alias gs='git status --short --branch'
 alias gco='git checkout'
@@ -92,6 +94,6 @@ alias gg='git log --graph --decorate --oneline --simplify-by-decoration'
 alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
 alias gga='git log --graph --oneline --decorate --all'
 
-alias diff='diff --color --ignore-space-change'
+alias nrs='npm run start'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
