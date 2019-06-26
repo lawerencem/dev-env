@@ -39,7 +39,7 @@ if type -q fd
 
     set -xg FZF_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
     set -xg FZF_DEFAULT_OPTS "--ansi"
-    set -xg FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+    set -xg FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND --search-path \$dir"
 end
 
 if type -q nvim
