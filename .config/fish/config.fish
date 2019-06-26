@@ -32,10 +32,10 @@ alias reload="source $HOME/.config/fish/config.fish"
 alias edit="vi $HOME/.config/fish/config.fish"
 
 if type -q fd
-    alias c='cd (fd -t d | fzf)'
-    alias ch='cd (fd --search-path $HOME -t d | fzf)'
-    alias v='vi (fd | fzf)'
-    alias vh='vi (fd --search-path $HOME | fzf)'
+    alias c='cd (fd --type d --color=always | fzf --ansi)'
+    alias ch='cd (fd --type d --color=always --search-path $HOME | fzf --ansi)'
+    alias v='vi (fd --color=always | fzf --ansi)'
+    alias vh='vi (fd --color=always --search-path $HOME | fzf --ansi)'
 
     set -xg FZF_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
     set -xg FZF_DEFAULT_OPTS "--ansi"
