@@ -31,10 +31,16 @@ alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 alias reload="source $HOME/.config/fish/config.fish"
 alias edit="vi $HOME/.config/fish/config.fish"
 
-alias c='cd (fd -t d | fzf)'
-alias ch='cd (fd --search-path $HOME -t d | fzf)'
-alias v='vi (fd | fzf)'
-alias vh='vi (fd --search-path $HOME | fzf)'
+if type -q fd
+    alias c='cd (fd -t d | fzf)'
+    alias ch='cd (fd --search-path $HOME -t d | fzf)'
+    alias v='vi (fd | fzf)'
+    alias vh='vi (fd --search-path $HOME | fzf)'
+
+    set -xg FZF_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
+    set -xg FZF_DEFAULT_OPTS "--ansi"
+    set -xg FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+end
 
 if type -q nvim
     alias vim=nvim
