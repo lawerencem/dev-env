@@ -154,5 +154,8 @@ let g:UltiSnipsExpandTrigger="<c-i>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" emmet
+let g:user_emmet_leader_key=','
+
 " use system clipboard
 set clipboard=unnamed
