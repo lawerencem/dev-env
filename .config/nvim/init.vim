@@ -94,6 +94,35 @@ filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 autocmd FileType elm, javascript, typescript, css, scss, html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
+" general key bindings
+inoremap < <><Left>
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap ` ``<Left>
+
+noremap K     {
+noremap J     }
+noremap H     ^
+noremap L     $
+noremap <C-x> :bp<Bar>bd #<Cr>
+
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+nnoremap <Tab>   >>
+nnoremap <S-Tab> <<
+vnoremap <Tab>   >><Esc>gv
+vnoremap <S-Tab> <<<Esc>gv
+
+nnoremap Q @q
+
+nnoremap Y y$
+
 " fzf
 nnoremap <leader>p :Files<cr>
 nnoremap <leader>o :GFiles<cr>
@@ -156,6 +185,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " emmet
 let g:user_emmet_leader_key=','
+
+"muselect
+set completeopt+=menuone
+set completeopt+=noselect
+set completeopt+=noinsert
 
 " use system clipboard
 set clipboard=unnamed
