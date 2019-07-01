@@ -87,7 +87,7 @@ set incsearch ignorecase smartcase
 set noswapfile
 set nowrap
 set shiftwidth=4 softtabstop=4 tabstop=4 expandtab
-set spell spelllang=en_us
+"set spell spelllang=en_us
 set iskeyword+=-
 
 filetype plugin on
