@@ -10,7 +10,6 @@ Plug 'tpope/vim-sensible'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'dag/vim-fish'
-Plug 'dmix/elvish.vim'
 Plug 'elmcast/elm-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'pangloss/vim-javascript'
@@ -33,12 +32,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'idanarye/vim-vebugger'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'w0rp/ale'
-Plug 'lifepillar/vim-mucomplete'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 call plug#end()
 
 if pluginstall != 0
@@ -87,35 +82,12 @@ set incsearch ignorecase smartcase
 set noswapfile
 set nowrap
 set shiftwidth=4 softtabstop=4 tabstop=4 expandtab
-"set spell spelllang=en_us
+set spell spelllang=en_us
 set iskeyword+=-
 
 filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 autocmd FileType elm, javascript, typescript, css, scss, html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
-
-" general key bindings
-noremap K     {
-noremap J     }
-noremap H     ^
-noremap L     $
-noremap <C-x> :bp<Bar>bd #<Cr>
-
-inoremap <C-k> <Up>
-inoremap <C-j> <Down>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-
-nnoremap <Tab>   >>
-nnoremap <S-Tab> <<
-vnoremap <Tab>   >><Esc>gv
-vnoremap <S-Tab> <<<Esc>gv
-
-nnoremap Q @q
-
-nnoremap Y y$
-
-nnoremap <leader>j :s/\n//<cr> :nohlsearch<cr>
 
 " fzf
 nnoremap <leader>p :Files<cr>
@@ -180,11 +152,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " emmet
 let g:user_emmet_leader_key=','
-
-"muselect
-set completeopt+=menuone
-set completeopt+=noselect
-set completeopt+=noinsert
 
 " use system clipboard
 set clipboard=unnamed
