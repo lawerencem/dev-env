@@ -115,6 +115,8 @@ nnoremap Q @q
 
 nnoremap Y y$
 
+nnoremap <leader>j :s/\n//<cr> :nohlsearch<cr>
+
 " fzf
 nnoremap <leader>p :Files<cr>
 nnoremap <leader>o :GFiles<cr>
