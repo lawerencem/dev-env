@@ -95,14 +95,6 @@ autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 autocmd FileType elm, javascript, typescript, css, scss, html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " general key bindings
-inoremap < <><Left>
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap ` ``<Left>
-
 noremap K     {
 noremap J     }
 noremap H     ^
@@ -176,6 +168,7 @@ let g:ale_fixers = {
 \   'javascript': ['eslint', 'prettier'],
 \   'typescript': ['eslint', 'tslint', 'prettier'],
 \   'markdown': ['prettier'],
+\   'python': ['black'],
 \}
 
 " ultisnips
