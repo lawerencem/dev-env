@@ -1,6 +1,5 @@
-[user]
-	email = kavi.jivan@nextcentury.com
-	name = Kavi Jivan
+[include]
+	path=~/.gituserconfig
 [push]
 	default = simple
 [pull]
