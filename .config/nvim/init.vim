@@ -100,7 +100,8 @@ let g:elm_setup_keybindings = 0
 
 " netrw
 command! E Explore
-nnoremap <leader>e :E<cr>
+nnoremap <leader>ee :E<cr>
+nnoremap <leader>er :Rexplore<cr>
 let g:netrw_localrmdir='rm -r'
 let g:netrw_banner="0"
 let g:netrw_sort_sequence=""
