@@ -1,4 +1,7 @@
 if [[ $- == *i* ]]; then
+    if [[ -x "/usr/local/bin/fish" ]]; then
+        exec /usr/local/bin/fish
+    fi
     if [[ -x "/home/linuxbrew/.linuxbrew/bin/fish" ]]; then
         exec /home/linuxbrew/.linuxbrew/bin/fish
     fi
