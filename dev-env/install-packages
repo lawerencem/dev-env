@@ -7,9 +7,13 @@ brew install \
 wemux \
 neovim \
 ripgrep-bin \
-exa \
-fzf \
 fd \
+fzf \
+tldr \
+exa \
+diff-so-fancy \
+bat \
+htop \
 watchman \
 ccze \
 git \
@@ -19,8 +23,6 @@ python3 \
 node \
 exercism \
 autossh \
-cmake \
-clang-format \
 gradle
 
 # rust
@@ -53,6 +55,7 @@ simplenote \
 iterm2 \
 font-lato \
 font-open-sans \
+font-raleway \
 font-sourcecodepro-nerd-font \
 font-sourcecodepro-nerd-font-mono \
 spectacle \
@@ -63,7 +66,6 @@ gitter \
 vnc-viewer \
 amazon-music \
 flux \
-dash \
 docker \
 homebrew/cask-versions/java8
 
@@ -80,5 +82,4 @@ yapf
 
 npm install -g \
 create-react-app \
-js-beautify \
-remark-cli
+prettier
