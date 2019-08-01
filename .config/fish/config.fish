@@ -51,10 +51,6 @@ if type -q exa
     alias l='exa'
     alias ls='exa'
     alias ll='exa -l'
-else
-    alias l='ls --color'
-    alias ls='ls --color'
-    alias ll='ls --color -l'
 end
 
 alias grep='command grep --color=auto'
