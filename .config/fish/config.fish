@@ -75,7 +75,11 @@ if type -q ccze
     end
 end
 
-alias diff='diff --color --ignore-space-change'
+if type -q colordiff
+    alias diff='colordiff --ignore-space-change'
+else
+    alias diff='diff --color --ignore-space-change'
+end
 
 alias g='git'
 alias gs='git status --short --branch'
