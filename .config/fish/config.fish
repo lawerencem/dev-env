@@ -19,6 +19,9 @@ end
 if test -d $HOME/owf/apache-tomcat
     set -gx TOMCAT_DIR $HOME/owf/apache-tomcat
 end
+if test -d /usr/local/opt/mysql@5.5/bin
+    set -gx PATH $PATH /usr/local/opt/mysql@5.5/bin
+end
 
 set -xg fish_greeting ""
 
