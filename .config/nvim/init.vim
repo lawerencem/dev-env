@@ -1,8 +1,7 @@
-let pluginstall=system("test -e ~/.local/share/nvim/site/autoload/plug.vim; echo $status")
-if pluginstall != 0
-    call system("curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim")
-    so ~/.local/share/nvim/site/autoload/plug.vim
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -35,10 +34,6 @@ Plug 'w0rp/ale'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 call plug#end()
-
-if pluginstall != 0
-    :PlugInstall
-endif
 
 " leader
 let mapleader = "\<Space>"
