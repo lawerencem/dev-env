@@ -113,6 +113,9 @@ if has('persistent_undo')
 endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
 
+" polygot
+let g:polyglot_disabled = ['javascript', 'typescript', 'rust', 'elm']
+
 " ale
 let g:ale_completion_enabled = 1
 nnoremap <leader>d :ALEGoToDefinition<cr>
