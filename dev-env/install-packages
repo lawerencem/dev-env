@@ -23,7 +23,8 @@ elm \
 python3 \
 node \
 exercism \
-autossh
+autossh \
+uncrustify
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
