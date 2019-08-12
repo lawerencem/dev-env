@@ -15,7 +15,7 @@ colordiff \
 diff-so-fancy \
 bat \
 htop \
-watchman \
+watchexec \
 ccze \
 git \
 golang \
