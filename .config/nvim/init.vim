@@ -128,6 +128,7 @@ nnoremap <leader>ff :ALEFix<cr>
 
 let g:ale_linters = {
 \   'rust': ['rls'],
+\   'java': ['javalsp'],
 \}
 
 
@@ -142,6 +143,7 @@ let g:ale_fixers = {
 \   'typescript': ['eslint', 'tslint', 'prettier'],
 \   'markdown': ['prettier'],
 \   'python': ['black'],
+\   'java': ['google_java_format']
 \}
 
 " ultisnips
