@@ -45,6 +45,10 @@ if type -q fd
     set -xg FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND --search-path \$dir"
 end
 
+if type -q rg
+    alias rgi='rg --no-ignore'
+end
+
 if type -q nvim
     alias vim=nvim
     alias vi=nvim
