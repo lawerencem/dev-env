@@ -109,5 +109,10 @@ alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
 alias gga='git log --graph --oneline --decorate --all'
 
 alias nrs='npm run start'
+alias nrb='npm run build'
+alias nrt='npm run test'
+alias nrth='npm run test-headless'
+alias nrl='npm run lint'
+alias nre='npm run e2e'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
