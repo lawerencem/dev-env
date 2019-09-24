@@ -40,6 +40,8 @@ if type -q fd
     alias v='vi (fd --color=always | fzf --ansi)'
     alias vh='vi (fd --color=always --search-path $HOME | fzf --ansi)'
 
+    alias fdi='fd --no-ignore'
+
     set -xg FZF_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
     set -xg FZF_DEFAULT_OPTS "--ansi"
     set -xg FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND --search-path \$dir"
