@@ -1,5 +1,9 @@
 #!/usr/bin/env fish
 
+if test -d /usr/local/sbin
+    set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+end
+
 if test -d /home/linuxbrew/.linuxbrew/bin
     set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 end
