@@ -69,8 +69,8 @@ end
 alias grep='command grep --color=auto'
 
 if type -q bat
-    alias cat='bat'
-    alias b='bat'
+    alias cat='bat -p'
+    alias b='bat -p'
 end
 
 if type -q ccze
