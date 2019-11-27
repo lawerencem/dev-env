@@ -52,6 +52,7 @@ end
 brew cask install \
 google-chrome \
 simplenote \
+pomotodo \
 iterm2 \
 font-lato \
 font-open-sans \
