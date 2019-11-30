@@ -51,6 +51,7 @@ end
 
 brew cask install \
 google-chrome \
+brave-browser \
 simplenote \
 pomotodo \
 iterm2 \
