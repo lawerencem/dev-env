@@ -1,7 +1,6 @@
 #!/usr/bin/env fish
-brew tap caskroom/cask \
-caskroom/fonts \
-burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
+brew tap \
+homebrew/cask-fonts
 
 brew install \
 wemux \
