@@ -5,7 +5,7 @@ homebrew/cask-fonts
 brew install \
 wemux \
 neovim \
-ripgrep-bin \
+ripgrep \
 fd \
 fzf \
 tldr \
@@ -22,8 +22,7 @@ elm \
 python3 \
 node \
 exercism \
-autossh \
-google-java-format
+autossh
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
@@ -39,6 +38,10 @@ if test ! (grep host_list=\($USER\) /usr/local/etc/wemux.conf)
 end
 
 # watchman
+if test ! -e /etc/sysctl.conf
+    sudo touch /etc/sysctl.conf
+end
+
 if test ! (grep kern.maxfiles=10485760 /etc/sysctl.conf)
     sudo sysctl -w kern.maxfiles=10485760
     sudo fish -c 'echo kern.maxfiles=10485760 >> /etc/sysctl.conf'
@@ -53,6 +56,7 @@ google-chrome \
 brave-browser \
 simplenote \
 pomotodo \
+alacritty \
 iterm2 \
 font-lato \
 font-open-sans \
@@ -84,4 +88,7 @@ flake8
 npm install -g \
 typescript \
 tslint \
-prettier
+prettier \
+@vue/cli \
+@angular/cli \
+create-react-app
