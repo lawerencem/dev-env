@@ -82,7 +82,7 @@ set iskeyword+=-
 
 filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
-autocmd FileType elm, javascript, typescript, css, scss, html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType vue, elm, javascript, typescript, css, scss, html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " fzf
 nnoremap <leader>p :Files<cr>
@@ -138,6 +138,7 @@ let g:ale_fixers = {
 \   'scss': ['prettier'],
 \   'html': ['prettier'],
 \   'json': ['prettier'],
+\   'vue': ['prettier'],
 \   'rust' : ['rustfmt'],
 \   'javascript': ['eslint', 'prettier'],
 \   'typescript': ['eslint', 'tslint', 'prettier'],
