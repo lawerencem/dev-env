@@ -91,6 +91,12 @@ else
     alias diff='diff --color --ignore-space-change'
 end
 
+if type -q autossh
+    function ssh
+        command autossh -M 0 $argv
+    end
+end
+
 alias g='git'
 alias gs='git status --short --branch'
 alias gst='git stash'
