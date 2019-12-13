@@ -30,9 +30,9 @@ Feel free to fork and manipulate the repo as you see fit. If you think I'll like
 - Install homebrew
 
 - Add SSH Key to github
-- curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/setup-dev-env | bash
-- ~/dev-env/install-brew-and-fish
-- ~/dev-env/install-packages
+    curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/setup-dev-env | bash
+    ~/dev-env/install-brew-and-fish
+    ~/dev-env/install-packages
 
 - Brave
     - Install [LastPass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
