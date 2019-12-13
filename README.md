@@ -25,13 +25,13 @@ curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/install-
 curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/setup-dev-env | bash
 ~/dev-env/install-packages
 ```
-
 - Brave
     - Install [LastPass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
     - Install [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)
         - Copy from [google doc](https://docs.google.com/document/d/1tBjtwWiP-zOM1NK4QjnQqlKhoUCNYLijwyKi4zzTTQM/edit?usp=sharing) to vimium
     - Install [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
         - Redirect to [Daily Reminders](https://kjivan.io/posts/daily-reminders.html)
+- Spectacle - configure shortcut keys for screen control
 
 ## Notes
 In my fish config I alias **dg** to reference my dev environment bare git repo so I'm able to add configs and do typical git stuff using dg.
