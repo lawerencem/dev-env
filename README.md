@@ -4,22 +4,20 @@ Feel free to fork and manipulate the repo as you see fit. If you think I'll like
 
 ## Description of Components
 
-### New macOS System
+### Scripts
+- *dev-env/install-brew-fish* - Install brew and fish
+- *dev-env/setup-dev-env* - Checkout dev-env as a [bare git repo](https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) overlayed with your home directory
+- *dev-env/install-packages* - Install the packages I use most frequently (designed to be fast and idempotent)
+- *reindex-spotlight* - If spotlight isn't indexing fwr use this script
 
-#### Scripts
-- **dev-env/install-brew-fish** - Install brew and fish
-- **dev-env/setup-dev-env** - Checkout dev-env as a [bare git repo](https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) overlayed with your home directory
-- **dev-env/install-packages** - Install the packages I use most frequently (designed to be fast and idempotent)
+### iTerm Theme Files
+- *dev-env/gruvbox-dark.itermcolors* - dark theme I use with my vim gruvbox theme
+- *dev-env/gruvbox-light.itermcolors* - If you are into light themes
 
+### Reference Scripts
+- *dev-env/create-dev-env* - Create a dev-env bare repo (how I original created a bare repo)
 
-#### iTerm Theme Files
-- **dev-env/gruvbox-dark.itermcolors** - dark theme I use with my vim gruvbox theme
-- **dev-env/gruvbox-light.itermcolors** - If you are into light themes
-
-#### Reference Scripts
-- **dev-env/create-dev-env** - Create a dev-env bare repo (how I original created a bare repo)
-
-#### Manual Steps
+### Manual Steps
 - Update System
 - Keyboard
     - Under Modifier Keys... Set Caps Lock Key to Control
@@ -39,10 +37,7 @@ curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/setup-de
     - Install [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
         - Redirect to [Daily Reminders](https://kjivan.io/posts/daily-reminders.html)
 
-### Random stuff
-- **reindex-spotlight** - If spotlight isn't indexing fwr use this script
-
-### Notes
+## Notes
 In my fish config I alias **dg** to reference my dev environment bare git repo so I'm able to add configs and do typical git stuff using dg.
 
 For example if I want to add my neovim config I would
