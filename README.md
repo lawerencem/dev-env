@@ -2,22 +2,20 @@
 
 Feel free to fork and manipulate the repo as you see fit. If you think I'll like something feel free to submit a pull request.
 
-## Description of Components
-
-### Scripts
+## Scripts
 - *dev-env/install-brew-fish* - Install brew and fish
 - *dev-env/setup-dev-env* - Checkout dev-env as a [bare git repo](https://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) overlayed with your home directory
 - *dev-env/install-packages* - Install the packages I use most frequently (designed to be fast and idempotent)
 - *reindex-spotlight* - If spotlight isn't indexing fwr use this script
 
-### iTerm Theme Files
+## iTerm Theme Files
 - *dev-env/gruvbox-dark.itermcolors* - dark theme I use with my vim gruvbox theme
 - *dev-env/gruvbox-light.itermcolors* - If you are into light themes
 
-### Reference Scripts
+## Reference Scripts
 - *dev-env/create-dev-env* - Create a dev-env bare repo (how I original created a bare repo)
 
-### Manual Steps
+## Manual Steps
 - Update System
 - Keyboard
     - Under Modifier Keys... Set Caps Lock Key to Control
