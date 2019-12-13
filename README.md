@@ -16,7 +16,7 @@ Feel free to fork and manipulate the repo as you see fit. If you think I'll like
 ## Manual Steps
 - Update System
 - Keyboard
-    - Under *Modifier Keys...* Set *Caps Lock Key* to **Control**
+    - Under *Modifier Keys...* Set **Caps Lock Key** to **Control**
     - Set *Key Repeat* to **Max**
     - Set *Delay Until Repeat* to **Short**
 - Add SSH Key to github
