@@ -17,7 +17,7 @@ Feel free to fork and manipulate the repo as you see fit. If you think I'll like
 - **dev-env/gruvbox-light.itermcolors** - If you are into light themes
 
 #### Reference Scripts
-- **dev-env/creat-dev-env** - Create a dev-env bare repo (how I original created a bare repo)
+- **dev-env/create-dev-env** - Create a dev-env bare repo (how I original created a bare repo)
 
 #### Manual Steps
 - Update System
