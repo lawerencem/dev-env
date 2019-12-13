@@ -54,6 +54,7 @@ end
 
 brew cask install \
 google-chrome \
+firefox \
 brave-browser \
 simplenote \
 pomotodo \
