@@ -25,11 +25,10 @@ Feel free to fork and manipulate the repo as you see fit. If you think I'll like
     - Under Modifier Keys... Set Caps Lock Key to Control
     - Set Key Repeat to Max
     - Set Delay Until Repeat to Short
-- Install homebrew
 - Add SSH Key to github
 ```
+curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/install-brew-and-fish | bash
 curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/setup-dev-env | bash
-~/dev-env/install-brew-and-fish
 ~/dev-env/install-packages
 ```
 
