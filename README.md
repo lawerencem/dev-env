@@ -31,6 +31,7 @@ curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/setup-de
         - Copy from [google doc](https://docs.google.com/document/d/1tBjtwWiP-zOM1NK4QjnQqlKhoUCNYLijwyKi4zzTTQM/edit?usp=sharing) to vimium
     - Install [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
         - Redirect to [Daily Reminders](https://kjivan.io/posts/daily-reminders.html)
+    - Install [Vue Dev Tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
 - Spectacle - configure shortcut keys for screen control
 
 ## Notes
