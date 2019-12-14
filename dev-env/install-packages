@@ -89,7 +89,11 @@ flake8
 npm install -g \
 typescript \
 eslint \
+eslint-plugin-prettier \
 tslint \
+tslint-plugin-prettier \
+stylelint \
+stylelint-config-recommended \
 prettier \
 @vue/cli \
 @angular/cli \
