@@ -69,6 +69,7 @@ nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
 " settings
+set relativenumber
 set number
 set list listchars=tab:▸-,trail:⊡
 set colorcolumn=80
