@@ -56,22 +56,22 @@ brew cask install \
 google-chrome \
 firefox \
 brave-browser \
-simplenote \
+spectacle \
 alacritty \
 iterm2 \
+docker \
+slack \
+discord \
+insomnia \
+simplenote \
 font-lato \
 font-open-sans \
 font-raleway \
 font-sourcecodepro-nerd-font \
 font-sourcecodepro-nerd-font-mono \
-spectacle \
-insomnia \
-slack \
-discord \
-gitter \
-vnc-viewer \
 amazon-music \
-docker
+thinkorswim
+
 
 pip3 install --upgrade \
 pip \
@@ -89,8 +89,10 @@ flake8
 npm install -g \
 typescript \
 eslint \
+eslint-config-prettier \
 eslint-plugin-prettier \
 tslint \
+tslint-config-prettier \
 tslint-plugin-prettier \
 stylelint \
 stylelint-config-recommended \
