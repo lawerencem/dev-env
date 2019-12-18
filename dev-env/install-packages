@@ -98,5 +98,6 @@ stylelint \
 stylelint-config-recommended \
 prettier \
 @vue/cli \
+@vue/cli-init \
 @angular/cli \
 create-react-app
