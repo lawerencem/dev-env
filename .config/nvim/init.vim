@@ -157,4 +157,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:user_emmet_leader_key=','
 
 " use system clipboard
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
