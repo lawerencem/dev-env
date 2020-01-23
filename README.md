@@ -3,11 +3,11 @@
 Feel free to fork and manipulate the repo as you see fit. If you think I'll like something feel free to submit a pull request.
 
 ## Scripts
-- dev-env/install-brew-fish - Install brew and fish
-- dev-env/setup-dev-env - Checkout dev-env as a [bare git repo](https://www.atlassian.com/git/tutorials/dotfiles) overlayed with your home directory
-- dev-env/install-packages - Install the packages I use most frequently (designed to be fast and idempotent)
-- reindex-spotlight - If spotlight isn't indexing fwr use this script
-- dev-env/create-dev-env - Create a dev-env bare repo (how I originally created a bare repo)
+- dev-env/install-brew-fish.bash - Install brew and fish
+- dev-env/setup-dev-env.bash - Checkout dev-env as a [bare git repo](https://www.atlassian.com/git/tutorials/dotfiles) overlayed with your home directory
+- dev-env/install-packages.fish - Install the packages I use most frequently (designed to be fast and idempotent)
+- reindex-spotlight.fish - If spotlight isn't indexing fwr use this script
+- dev-env/create-dev-env.bash - Create a dev-env bare repo (how I originally created a bare repo)
 
 ## iTerm Theme Files
 - dev-env/gruvbox-dark.itermcolors - dark theme I use with my vim gruvbox theme
