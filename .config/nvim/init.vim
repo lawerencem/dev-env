@@ -74,8 +74,8 @@ nmap <silent> <leader>/ :nohlsearch<cr>
 
 " git gutter
 let g:gitgutter_highlight_lines = 0
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 
 " settings
 set relativenumber
