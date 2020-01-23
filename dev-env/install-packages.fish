@@ -98,4 +98,5 @@ prettier \
 @vue/cli \
 @vue/cli-init \
 @angular/cli \
-create-react-app
+create-react-app \
+expo-cli
