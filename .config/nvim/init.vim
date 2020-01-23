@@ -26,9 +26,22 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'idanarye/vim-vebugger'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'w0rp/ale'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
+
+Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-vetur', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-angular', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-spell-checker', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 " leader
@@ -114,7 +127,7 @@ nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
 let g:polyglot_disabled = []
 
 " ale
-let g:ale_completion_enabled = 1
+"let g:ale_completion_enabled = 1
 nnoremap <leader>d :ALEGoToDefinition<cr>
 nnoremap <leader>r :ALEFindReferences<cr>
 nnoremap <leader>h :ALEHover<cr>
@@ -144,13 +157,26 @@ let g:ale_fixers = {
 \   'java': ['google_java_format']
 \}
 
-" ultisnips
-let g:UltiSnipsExpandTrigger="<c-i>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " emmet
 let g:user_emmet_leader_key=','
 
 " use system clipboard
 set clipboard^=unnamed,unnamedplus
+
+" coc settings
+set hidden
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
