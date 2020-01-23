@@ -22,6 +22,7 @@ golang \
 elm \
 python3 \
 node \
+yarn \
 exercism \
 autossh
 
