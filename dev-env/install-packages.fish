@@ -92,9 +92,6 @@ typescript \
 eslint \
 eslint-config-prettier \
 eslint-plugin-prettier \
-tslint \
-tslint-config-prettier \
-tslint-plugin-prettier \
 stylelint \
 stylelint-config-recommended \
 prettier \
