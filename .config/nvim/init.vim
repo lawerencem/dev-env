@@ -8,12 +8,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 
 Plug 'sheerun/vim-polyglot'
-Plug 'dag/vim-fish'
-Plug 'elmcast/elm-vim'
-Plug 'rust-lang/rust.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/vim-js-pretty-template'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ap/vim-css-color'
 
 Plug 'gruvbox-community/gruvbox'
@@ -115,7 +111,7 @@ endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
 
 " polygot
-let g:polyglot_disabled = ['javascript', 'typescript', 'rust', 'elm']
+let g:polyglot_disabled = []
 
 " ale
 let g:ale_completion_enabled = 1
