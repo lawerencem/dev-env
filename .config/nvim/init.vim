@@ -28,6 +28,7 @@ Plug 'idanarye/vim-vebugger'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
+Plug 'luochen1990/rainbow'
 
 Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -150,7 +151,8 @@ let g:ale_fixers = {
 \   'vue': ['prettier'],
 \   'rust' : ['rustfmt'],
 \   'javascript': ['eslint', 'prettier'],
-\   'typescript': ['eslint', 'tslint', 'prettier'],
+\   'typescript': ['eslint', 'prettier'],
+\   'typescriptreact': ['prettier'],
 \   'markdown': ['prettier'],
 \   'python': ['black'],
 \   'java': ['google_java_format']
@@ -158,6 +160,9 @@ let g:ale_fixers = {
 
 " emmet
 let g:user_emmet_leader_key=','
+
+" rainbow parentheses
+let g:rainbow_active = 1
 
 " use system clipboard
 set clipboard^=unnamed,unnamedplus
