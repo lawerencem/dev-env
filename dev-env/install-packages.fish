@@ -80,12 +80,15 @@ setuptools \
 wheel
 
 pip3 install \
-pipenv \
 virtualenv \
 cookiecutter \
 neovim \
 pylint \
 flake8
+
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+mkdir -p $HOME/.config/fish/completions/
+$HOME/.poetry/bin/poetry completions fish > $HOME/.config/fish/completions/poetry.fish
 
 npm install -g \
 typescript \

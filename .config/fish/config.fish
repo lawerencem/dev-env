@@ -26,6 +26,9 @@ end
 if test -d /usr/local/opt/mysql@5.5/bin
     set -gx PATH $PATH /usr/local/opt/mysql@5.5/bin
 end
+if test -d $HOME/.poetry/bin
+    set -gx PATH $PATH $HOME/.poetry/bin
+end
 
 set -xg fish_greeting ""
 
