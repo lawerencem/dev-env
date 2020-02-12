@@ -17,6 +17,7 @@ htop \
 watchexec \
 ccze \
 git \
+github/gh/gh \
 hub \
 golang \
 elm \
