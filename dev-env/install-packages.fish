@@ -25,7 +25,8 @@ python3 \
 node \
 yarn \
 exercism \
-autossh
+autossh \
+docker-completion
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
