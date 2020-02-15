@@ -89,7 +89,7 @@ set showmatch
 set incsearch ignorecase smartcase
 set noswapfile
 set nowrap
-set shiftwidth=4 softtabstop=4 tabstop=4 expandtab
+set shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 set spelllang=en_us
 set iskeyword+=-
 
