@@ -42,6 +42,9 @@ Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-angular', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-spell-checker', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+
+Plug 'mlaursen/vim-react-snippets'
 call plug#end()
 
 " leader
