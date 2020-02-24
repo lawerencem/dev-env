@@ -9,6 +9,14 @@ Feel free to fork and manipulate the repo as you see fit. If you think I'll like
 - reindex-spotlight.fish - If spotlight isn't indexing fwr use this script
 - dev-env/create-dev-env.bash - Create a dev-env bare repo (how I originally created a bare repo)
 
+## Configs
+- .config/fish/config.fish - [fish](https://fishshell.com/) shell configuration
+- .config/fish/functions/fish_prompt.fish - Prompt configuration
+- .tmux.conf - [tmux](https://github.com/tmux/tmux) tmux configuration
+- .config/nvim/init.vim - [neovim](https://neovim.io/) configuration
+- .config/alacritty/alacritty.yml - [alacritty](https://github.com/alacritty/alacritty) configuration
+- .elvish/rc.elv - [elvish](elv.sh) configuration
+
 ## iTerm Theme Files
 - dev-env/gruvbox-dark.itermcolors - dark theme I use with my vim gruvbox theme
 - dev-env/gruvbox-light.itermcolors - If you are into light themes
