@@ -65,6 +65,7 @@ iterm2 \
 docker \
 slack \
 discord \
+gitter \
 insomnia \
 simplenote \
 font-lato \
