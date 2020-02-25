@@ -131,8 +131,8 @@ alias nrth='npm run test-headless'
 alias nrl='npm run lint'
 alias nre='npm run e2e'
 
-alias gcb='./gradlew clean build'
-alias gcbp='./gradlew clean build publishToMavenLocal'
-alias gcbr='./gradlew clean bootrun'
+alias grcb='./gradlew clean build'
+alias grcbp='./gradlew clean build publishToMavenLocal'
+alias grcbr='./gradlew clean bootrun'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
