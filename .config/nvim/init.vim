@@ -134,8 +134,7 @@ let g:polyglot_disabled = []
 "nnoremap <leader>d :ALEGoToDefinition<cr>
 "nnoremap <leader>r :ALEFindReferences<cr>
 "nnoremap <leader>h :ALEHover<cr>
-
-nnoremap <leader>ff :ALEFix<cr>
+"nnoremap <leader>ff :ALEFix<cr>
 
 let g:ale_linters = {
 \   'rust': ['rls'],
@@ -227,7 +226,7 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 nmap <leader>ac  <Plug>(coc-codeaction)
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>ff  <Plug>(coc-fix-current)
 
 " Introduce function text object
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
