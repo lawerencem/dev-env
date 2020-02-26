@@ -223,7 +223,7 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 nmap <leader>ac  <Plug>(coc-codeaction)
-nmap <leader>ff  <Plug>(coc-fix-current)
+nmap <leader>x  <Plug>(coc-fix-current)
 
 " Introduce function text object
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -257,21 +257,21 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>ka  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent> <space>x  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>ke  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <space>d  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>kd  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent> <space>m  :<C-u>CocList outline<cr>
+nnoremap <silent> <space>km  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent> <space>sy  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>ks  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <space>kj  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <space>kk  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent> <space>r :<C-u>CocListResume<CR>
+nnoremap <silent> <space>kr :<C-u>CocListResume<CR>
 
 let t:is_transparent = 1
 function! Toggle_transparent()
