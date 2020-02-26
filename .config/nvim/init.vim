@@ -272,3 +272,15 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>r :<C-u>CocListResume<CR>
+
+let t:is_transparent = 1
+function! Toggle_transparent()
+    if t:is_transparent == 0
+        hi Normal guibg=NONE ctermbg=NONE
+        let t:is_transparent = 1
+    else
+        let t:is_tranparent = 0
+    endif
+endfunction
+hi Normal guibg=NONE ctermbg=NONE
+nnoremap <C-t> : call Toggle_transparent()<CR>
