@@ -64,9 +64,10 @@ if type -q nvim
 end
 
 if type -q exa
-    alias l='exa'
-    alias ls='exa'
-    alias ll='exa -l'
+    alias l='exa --oneline'
+    alias ls='exa --oneline'
+    alias ll='exa --long'
+    alias lt='exa --tree'
 end
 
 alias grep='command grep --color=auto'
