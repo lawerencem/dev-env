@@ -85,7 +85,6 @@ nmap [h <Plug>(GitGutterPrevHunk)
 set relativenumber
 set number
 set list listchars=tab:▸-,trail:⊡
-set colorcolumn=80
 set showmatch
 set incsearch ignorecase smartcase
 set noswapfile
