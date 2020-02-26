@@ -1,5 +1,5 @@
 window:
-  decorations: full
+  decorations: none
   startup_mode: Maximized
   title: Alacritty
 
@@ -73,7 +73,7 @@ visual_bell:
   duration: 0
   color: '0xffffff'
 
-background_opacity: 1.0
+background_opacity: 0.55
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
