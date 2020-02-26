@@ -43,6 +43,7 @@ Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-angular', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-spell-checker', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'mlaursen/vim-react-snippets'
 call plug#end()
@@ -134,7 +135,7 @@ let g:polyglot_disabled = []
 "nnoremap <leader>d :ALEGoToDefinition<cr>
 "nnoremap <leader>r :ALEFindReferences<cr>
 "nnoremap <leader>h :ALEHover<cr>
-"nnoremap <leader>ff :ALEFix<cr>
+nnoremap <leader>af :ALEFix<cr>
 
 let g:ale_linters = {
 \   'rust': ['rls'],
@@ -213,9 +214,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <leader>rn <Plug>(coc-rename)
 
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
 augroup mygroup
   autocmd!
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
@@ -243,6 +241,9 @@ xmap <silent> <TAB> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
+nnoremap <leader>f :Format<cr>
+"xmap <leader>f  <Plug>(coc-format-selected)
+"nmap <leader>f  <Plug>(coc-format-selected)
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
