@@ -42,16 +42,14 @@ alias reload="source $HOME/.config/fish/config.fish"
 alias edit="vi $HOME/.config/fish/config.fish"
 
 if type -q fd
-    alias c='cd (fd --type d --color=always | fzf --ansi)'
-    alias ch='cd (fd --type d --color=always --search-path $HOME | fzf --ansi)'
-    alias v='vi (fd --color=always | fzf --ansi)'
-    alias vh='vi (fd --color=always --search-path $HOME | fzf --ansi)'
+    alias c='cd (fd --type d --color=always | sk --ansi)'
+    alias ch='cd (fd --type d --color=always --search-path $HOME | sk --ansi)'
+    alias v='vi (fd --color=always | sk --ansi)'
+    alias vh='vi (fd --color=always --search-path $HOME | sk --ansi)'
 
     alias fdi='fd --no-ignore'
 
-    set -xg FZF_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
-    set -xg FZF_DEFAULT_OPTS "--ansi"
-    set -xg FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND --search-path \$dir"
+    set -xg SKIM_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
 end
 
 if type -q rg
