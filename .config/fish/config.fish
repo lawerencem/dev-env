@@ -48,12 +48,14 @@ if type -q fd
     alias vh='vi (fd --color=always --search-path $HOME | sk --ansi)'
 
     alias fdi='fd --no-ignore'
+    alias fdih='fd --no-ignore --hidden'
 
     set -xg SKIM_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
 end
 
 if type -q rg
     alias rgi='rg --no-ignore'
+    alias rgih='rg --no-ignore --hidden'
 end
 
 if type -q nvim
