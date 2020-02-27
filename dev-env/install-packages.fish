@@ -8,6 +8,7 @@ neovim \
 ripgrep \
 fd \
 fzf \
+sk \
 tldr \
 exa \
 colordiff \
