@@ -69,6 +69,7 @@ discord \
 gitter \
 insomnia \
 simplenote \
+grammarly \
 font-lato \
 font-open-sans \
 font-raleway \
