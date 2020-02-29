@@ -41,11 +41,17 @@ alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 alias reload="source $HOME/.config/fish/config.fish"
 alias edit="vi $HOME/.config/fish/config.fish"
 
+if type -q sk
+  set -xg SKIM_DEFAULT_OPTIONS "--ansi"
+end
+
 if type -q fd
-    alias c='cd (fd --type d --color=always | sk --ansi)'
-    alias ch='cd (fd --type d --color=always --search-path $HOME | sk --ansi)'
-    alias v='vi (fd --color=always | sk --ansi)'
-    alias vh='vi (fd --color=always --search-path $HOME | sk --ansi)'
+    if type -q sk
+        alias c='cd (fd --type d --color=always | sk --ansi)'
+        alias ch='cd (fd --type d --color=always --search-path $HOME | sk --ansi)'
+        alias v='vi (fd --color=always | sk --ansi)'
+        alias vh='vi (fd --color=always --search-path $HOME | sk --ansi)'
+    end
 
     alias fdi='fd --no-ignore'
     alias fdih='fd --no-ignore --hidden'

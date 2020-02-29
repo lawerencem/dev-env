@@ -7,7 +7,6 @@ wemux \
 neovim \
 ripgrep \
 fd \
-fzf \
 sk \
 tldr \
 exa \
@@ -31,11 +30,6 @@ docker-completion
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
-
-# fzf
-if test ! (grep fzf_key_bindings $HOME/.config/fish/functions/fish_user_key_bindings.fish)
-    yes | sh (brew --prefix)/opt/fzf/install
-end
 
 # wemux
 if test ! (grep host_list=\($USER\) /usr/local/etc/wemux.conf)
