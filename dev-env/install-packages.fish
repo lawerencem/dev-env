@@ -75,8 +75,7 @@ font-open-sans \
 font-raleway \
 font-sourcecodepro-nerd-font \
 font-sourcecodepro-nerd-font-mono \
-amazon-music \
-thinkorswim
+amazon-music
 
 
 pip3 install --upgrade \
