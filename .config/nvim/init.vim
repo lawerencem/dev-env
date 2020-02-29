@@ -45,6 +45,7 @@ Plug 'iamcco/coc-spell-checker', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 
+Plug 'honza/vim-snippets'
 Plug 'mlaursen/vim-react-snippets'
 call plug#end()
 
