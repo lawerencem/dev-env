@@ -46,22 +46,24 @@ if type -q sk
 end
 
 if type -q fd
+    alias fd='fd --hidden'
+    alias fda='fd --no-ignore'
+
     if type -q sk
-        alias c='cd (fd --type d --color=always | sk --ansi)'
-        alias ch='cd (fd --type d --color=always --search-path $HOME | sk --ansi)'
-        alias v='vi (fd --color=always | sk --ansi)'
-        alias vh='vi (fd --color=always --search-path $HOME | sk --ansi)'
+        set -xg SKIM_DEFAULT_COMMAND "fd"
+
+        alias c='cd (fd --type d | sk)'
+        alias ch='cd (fd --type d --search-path $HOME | sk)'
+        alias v='vi (fd | sk)'
+        alias vh='vi (fd --search-path $HOME | sk)'
+        alias ska='fda | sk'
     end
-
-    alias fdi='fd --no-ignore'
-    alias fdih='fd --no-ignore --hidden'
-
-    set -xg SKIM_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
 end
 
 if type -q rg
-    alias rgi='rg --no-ignore'
-    alias rgih='rg --no-ignore --hidden'
+    alias rg='rg --hidden'
+    alias rga='rg --no-ignore'
+    alias rgi='sk --ansi -i -c \'rg --color=always --line-number "{}"\''
 end
 
 if type -q nvim
