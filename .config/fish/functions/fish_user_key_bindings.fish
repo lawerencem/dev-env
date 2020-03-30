@@ -1,3 +1,3 @@
 function fish_user_key_bindings
-  bind \cr "history | sk"
+  sk_key_bindings
 end
