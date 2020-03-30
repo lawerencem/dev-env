@@ -26,7 +26,8 @@ node \
 yarn \
 exercism \
 autossh \
-docker-completion
+docker-completion \
+nativifier
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
