@@ -132,7 +132,7 @@ alias gl='git log --abbrev-commit --pretty=oneline'
 alias gg='git log --graph --decorate --oneline --simplify-by-decoration'
 alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
 alias gga='git log --graph --oneline --decorate --all'
-alias gbr="git branch | grep -v "Development" | xargs git branch -D"
+alias git-remove-non-development-branches="git branch | grep -v "Development" | xargs git branch -D"
 
 alias nrs='npm run start'
 alias nrb='npm run build'
