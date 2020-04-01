@@ -1,6 +1,6 @@
 function gcb
-  git checkout Development
   git stash
+  git checkout Development
   git pull
   git stash pop
   git checkout -b $argv
