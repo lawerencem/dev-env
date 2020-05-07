@@ -98,6 +98,8 @@ if type -q ccze
     end
 end
 
+alias serve-http='python -m SimpleHTTPServer > /dev/null'
+
 if type -q colordiff
     alias diff='colordiff --ignore-space-change'
 else
