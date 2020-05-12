@@ -169,6 +169,10 @@ let g:rainbow_active = 1
 " use system clipboard
 set clipboard^=unnamed,unnamedplus
 
+let g:FerretExecutableArguments = {
+  \   'rg': '--vimgrep --no-heading --no-config --max-columns 4096 --no-ignore'
+  \ }
+
 " coc settings
 set hidden
 set nobackup
