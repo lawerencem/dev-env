@@ -149,5 +149,6 @@ alias nre='npm run e2e'
 alias grcb='./gradlew clean build'
 alias grcbp='./gradlew clean build publishToMavenLocal'
 alias grcbr='./gradlew clean bootrun'
+alias grns='./gradlew npmStart'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish

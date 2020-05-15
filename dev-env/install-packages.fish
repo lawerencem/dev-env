@@ -70,7 +70,8 @@ font-open-sans \
 font-raleway \
 font-sourcecodepro-nerd-font \
 font-sourcecodepro-nerd-font-mono \
-amazon-music
+amazon-music \
+sonic-pi
 
 
 pip3 install --upgrade \
