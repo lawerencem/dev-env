@@ -5,7 +5,7 @@ homebrew/cask-fonts
 brew install \
 wemux \
 neovim \
-ripgrep \
+ripgrep-bin \
 fd \
 sk \
 tldr \
