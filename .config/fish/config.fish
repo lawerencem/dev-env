@@ -144,4 +144,13 @@ alias grcb='./gradlew clean build'
 alias grcbp='./gradlew clean build publishToMavenLocal'
 alias grcbr='./gradlew clean bootrun'
 
+alias java8='bash -c "sudo update-java-alternatives -s java-1.8.0-openjdk-amd64" ; set -gx JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-amd64 ; set -gx PATH $PATH $JAVA_HOME/bin'
+alias java11='bash -c "sudo update-java-alternatives -s java-1.11.0-openjdk-amd64" ; set -gx JAVA_HOME /usr/lib/jvm/java-1.11.0-openjdk-amd64 ; set -gx PATH $PATH $JAVA_HOME/bin'
+
+# Folder aliases
+alias dl='cd ~/Downloads'
+alias workspace='cd ~/workspace'
+alias cg='cd ~/workspace/cg1v'
+alias kairos='cd ~/workspace/kairos'
+
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
