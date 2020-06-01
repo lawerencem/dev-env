@@ -1,0 +1,39 @@
+#!/bin/sh
+
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+	against=HEAD
+else
+	against=$(git hash-object -t tree /dev/null)
+fi
+
+exec 1>&2
+
+changed_files=$(git diff --cached --name-only $against)
+
+print_error () {
+   RED='\033[0;31m'
+   NC='\033[0m'
+   printf '\n''\n'${RED}%s${NC}'\n''\n' "$1"
+}
+
+exit_status=0
+
+if [[ $changed_files =~ "<dir>" ]]; then
+    if [[ $(git diff) ]]; then
+        git stash --keep-index --include-untracked
+        stashed=1
+    fi
+
+    if ! ./gradlew clean build; then
+      print_error "Build failed. Please fix the build before commiting."
+      exit_status=1;
+    fi
+
+    popd
+    if [[ $stashed -eq 1 ]]; then
+        git stash pop
+    fi
+fi
+
+exit $exit_status
