@@ -31,7 +31,6 @@ Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'luochen1990/rainbow'
 
-Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
@@ -46,8 +45,8 @@ Plug 'iamcco/coc-spell-checker', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'mlaursen/vim-react-snippets'
 call plug#end()
 
 " leader
@@ -97,7 +96,6 @@ set iskeyword+=-
 
 filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
-autocmd FileType vue,elm,javascript,typescript,css,scss,html setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 
 " fzf
 nnoremap <leader>p :Files<cr>
@@ -130,35 +128,6 @@ nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
 
 " polygot
 let g:polyglot_disabled = []
-
-" ale
-"let g:ale_completion_enabled = 1
-"nnoremap <leader>d :ALEGoToDefinition<cr>
-"nnoremap <leader>r :ALEFindReferences<cr>
-"nnoremap <leader>h :ALEHover<cr>
-nnoremap <leader>af :ALEFix<cr>
-
-let g:ale_linters = {
-\   'rust': ['rls'],
-\   'java': ['javalsp'],
-\}
-
-
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'css': ['prettier'],
-\   'scss': ['prettier'],
-\   'html': ['prettier'],
-\   'json': ['prettier'],
-\   'vue': ['prettier'],
-\   'rust' : ['rustfmt'],
-\   'javascript': ['eslint', 'prettier'],
-\   'typescript': ['eslint', 'prettier'],
-\   'typescriptreact': ['prettier'],
-\   'markdown': ['prettier'],
-\   'python': ['black'],
-\   'java': ['google_java_format']
-\}
 
 " emmet
 let g:user_emmet_leader_key=','
