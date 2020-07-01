@@ -139,7 +139,7 @@ let g:rainbow_active = 1
 set clipboard^=unnamed,unnamedplus
 
 let g:FerretExecutableArguments = {
-  \   'rg': '--vimgrep --no-heading --no-config --max-columns 4096 --no-ignore'
+  \   'rg': '--vimgrep --no-heading --no-config --max-columns 4096'
   \ }
 
 " coc settings
