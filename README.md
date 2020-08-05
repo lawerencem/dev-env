@@ -38,8 +38,11 @@ curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/setup-de
     - Install [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)
         - Copy from [google doc](https://docs.google.com/document/d/1tBjtwWiP-zOM1NK4QjnQqlKhoUCNYLijwyKi4zzTTQM/edit?usp=sharing) to vimium
     - Install [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
-        - Redirect to [Daily Reminders](https://kjivan.io/posts/daily-reminders.html)
-    - Install [Vue Dev Tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
+        - Redirect to [Daily Reminders](https://jivan.cc/posts/daily-reminders/)
+    - Install [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+    - Install [Vue Dev Tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+    - Install [Angular Dev Tools](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd)
+    - Install [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en)
 - Spectacle - configure shortcut keys for screen control
 
 ## Notes
