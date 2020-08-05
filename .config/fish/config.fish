@@ -37,6 +37,7 @@ set -xg EDITOR $VISUAL
 set -xg GIT_EDITOR $VISUAL
 
 alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
+alias dgc="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME commit --author 'Kavi Jivan <kjivan@gmail.com>'"
 
 alias reload="source $HOME/.config/fish/config.fish"
 alias edit="vi $HOME/.config/fish/config.fish"
