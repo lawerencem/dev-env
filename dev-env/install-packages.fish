@@ -67,8 +67,8 @@ grammarly \
 font-lato \
 font-open-sans \
 font-raleway \
-font-sourcecodepro-nerd-font \
-font-sourcecodepro-nerd-font-mono \
+font-source-code-pro \
+font-source-code-pro-for-powerline \
 amazon-music \
 sonic-pi
 
