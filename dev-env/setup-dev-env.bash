@@ -7,6 +7,11 @@ fi
 
 dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 
+FILE=$HOME/.gitignore
+if [ ! -f "$FILE" ]; then
+    touch $FILE
+fi
+
 if ! grep -q ".dev-env.git" $HOME/.gitignore; then
     echo ".dev-env.git" >> $HOME/.gitignore
 fi
