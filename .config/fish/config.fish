@@ -30,6 +30,10 @@ if test -d $HOME/.poetry/bin
     set -gx PATH $PATH $HOME/.poetry/bin
 end
 
+if test -f $HOME/.setup_proxy
+     source $HOME/.setup_proxy
+end
+
 set -xg fish_greeting ""
 
 set -xg VISUAL nvim
