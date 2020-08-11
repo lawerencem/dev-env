@@ -155,4 +155,6 @@ alias grcbp='./gradlew clean build publishToMavenLocal'
 alias grcbr='./gradlew clean bootrun'
 alias grns='./gradlew npmStart'
 
+alias acid-test-gyp='curl -sL https://github.com/nodejs/node-gyp/raw/master/macOS_Catalina_acid_test.sh | bash'
+
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
