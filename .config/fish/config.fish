@@ -45,6 +45,8 @@ alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 alias reload="source $HOME/.config/fish/config.fish"
 alias edit="vi $HOME/.config/fish/config.fish"
 
+bind \cs runsudo
+
 if type -q sk
   set -xg SKIM_DEFAULT_OPTIONS '--ansi --color="fg:#458588,bg:#1d2021,hl:#98971a,fg+:#458588,hl+:#cc241d,info:#b16286"'
   alias fzf='sk'
