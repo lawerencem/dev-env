@@ -43,6 +43,8 @@ curl -s https://raw.githubusercontent.com/kjivan/dev-env/master/dev-env/setup-de
     - Install [Vue Dev Tools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
     - Install [Angular Dev Tools](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd)
     - Install [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en)
+    - Go to System Preferences -> Keyboard -> Shortcuts -> App Shortcuts
+        - Add new shortcut cmd + ctrl + t to `Move Tab to New Window`
 - Spectacle - configure shortcut keys for screen control
 
 ## Notes
