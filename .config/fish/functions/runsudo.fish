@@ -3,4 +3,3 @@ function runsudo --description 'Run current command line as root'
     commandline -i 'sudo '
     commandline -f execute
 end
-bind \cs runsudo
