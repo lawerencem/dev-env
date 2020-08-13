@@ -30,8 +30,8 @@ if test -d $HOME/.poetry/bin
     set -gx PATH $PATH $HOME/.poetry/bin
 end
 
-if test -f $HOME/.setup_proxy
-     source $HOME/.setup_proxy
+if test -f $HOME/.local.fish
+     source $HOME/.local.fish
 end
 
 set -xg fish_greeting ""
@@ -157,6 +157,7 @@ alias nre='npm run e2e'
 alias grcb='./gradlew clean build'
 alias grcbp='./gradlew clean build publishToMavenLocal'
 alias grcbr='./gradlew clean bootrun'
+alias grbr='./gradlew bootrun'
 alias grns='./gradlew npmStart'
 
 alias acid-test-gyp='curl -sL https://github.com/nodejs/node-gyp/raw/master/macOS_Catalina_acid_test.sh | bash'
