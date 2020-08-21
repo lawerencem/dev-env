@@ -41,6 +41,7 @@ Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-angular', {'do': 'yarn install --frozen-lockfile'}
+Plug 'dansomething/coc-groovy', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-spell-checker', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
@@ -143,6 +144,9 @@ let g:FerretExecutableArguments = {
   \   'rg': '--vimgrep --no-heading --no-config --max-columns 4096'
   \ }
 
+nnoremap <leader>j :cn <cr>
+nnoremap <leader>k :cp <cr>
+
 " coc settings
 set hidden
 set nobackup
@@ -233,21 +237,21 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <space>ka  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>la  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent> <space>ke  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>le  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <space>kd  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>ld  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent> <space>km  :<C-u>CocList outline<cr>
+nnoremap <silent> <space>lm  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent> <space>ks  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>ls  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>kj  :<C-u>CocNext<CR>
+nnoremap <silent> <space>lj  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>kk  :<C-u>CocPrev<CR>
+nnoremap <silent> <space>lk  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent> <space>kr :<C-u>CocListResume<CR>
+nnoremap <silent> <space>lr :<C-u>CocListResume<CR>
 
 let t:is_transparent = 1
 function! Toggle_transparent()
