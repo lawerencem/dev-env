@@ -6,6 +6,7 @@ brew install \
 wemux \
 neovim \
 ripgrep \
+TankerHQ/homebrew-repo/ruplacer \
 fd \
 sk \
 tldr \
