@@ -104,7 +104,8 @@ if type -q ccze
     end
 end
 
-alias serve-http='python -m SimpleHTTPServer > /dev/null'
+alias serve-http='python -m SimpleHTTPServer 8000'
+alias serve-http3='python3 -m http.server 8000 --bind 127.0.0.1'
 
 if type -q colordiff
     alias diff='colordiff --ignore-space-change'
