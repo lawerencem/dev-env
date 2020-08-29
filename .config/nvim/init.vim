@@ -203,7 +203,6 @@ augroup end
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
-nmap <leader>ac  <Plug>(coc-codeaction)
 nmap <leader>x  <Plug>(coc-fix-current)
 
 " Introduce function text object
