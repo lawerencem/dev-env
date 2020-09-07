@@ -17,7 +17,9 @@ bat \
 htop \
 watchexec \
 ccze \
+svn \
 git \
+git-flow \
 github/gh/gh \
 hub \
 golang \
@@ -70,6 +72,7 @@ font-open-sans \
 font-raleway \
 font-source-code-pro \
 font-source-code-pro-for-powerline \
+spotify \
 amazon-music \
 sonic-pi
 
