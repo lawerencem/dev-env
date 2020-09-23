@@ -17,15 +17,6 @@ end
 if test -d $HOME/.cargo/bin
     set -gx PATH $PATH $HOME/.cargo/bin
 end
-if test -d $HOME/cg1v-dev-tools
-    set -gx PATH $PATH $HOME/cg1v-dev-tools
-end
-if test -d $HOME/owf/apache-tomcat
-    set -gx TOMCAT_DIR $HOME/owf/apache-tomcat
-end
-if test -d /usr/local/opt/mysql@5.5/bin
-    set -gx PATH $PATH /usr/local/opt/mysql@5.5/bin
-end
 if test -d $HOME/.poetry/bin
     set -gx PATH $PATH $HOME/.poetry/bin
 end
