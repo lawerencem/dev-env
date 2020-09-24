@@ -110,6 +110,12 @@ if type -q autossh
     end
 end
 
+# Network Debugging
+function get-port-app
+    command lsof -nP -iTCP:$argv | grep LISTEN
+end
+
+# Git
 alias g='git'
 alias gs='git status --short --branch'
 alias gst='git stash'
@@ -139,19 +145,23 @@ alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
 alias gga='git log --graph --oneline --decorate --all'
 alias git-delete-working-branches="git branch | grep -v '.*Development\|.*master' | xargs git branch -D"
 
+# NPM
 alias nrs='npm run start'
 alias nrb='npm run build'
 alias nrt='npm run test'
 alias nrth='npm run test-headless'
 alias nrl='npm run lint'
 alias nre='npm run e2e'
+alias acid-test-gyp='curl -sL https://github.com/nodejs/node-gyp/raw/master/macOS_Catalina_acid_test.sh | bash'
 
+# Gradle
 alias grcb='./gradlew clean build'
 alias grcbp='./gradlew clean build publishToMavenLocal'
 alias grcbr='./gradlew clean bootrun'
 alias grbr='./gradlew bootrun'
 alias grns='./gradlew npmStart'
 
-alias acid-test-gyp='curl -sL https://github.com/nodejs/node-gyp/raw/master/macOS_Catalina_acid_test.sh | bash'
+# Docker
+alias docker-stop-all='docker stop (docker ps -q)'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
