@@ -31,18 +31,23 @@ set -xg VISUAL nvim
 set -xg EDITOR $VISUAL
 set -xg GIT_EDITOR $VISUAL
 
+# dev-env git
 alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 
+# fish editing
 alias reload="source $HOME/.config/fish/config.fish"
 alias edit="vi $HOME/.config/fish/config.fish"
 
+# ctrl-s for sudo
 bind \cs runsudo
 
+# sk - fast fuzzy finder
 if type -q sk
   set -xg SKIM_DEFAULT_OPTIONS '--ansi --color="fg:#458588,bg:#1d2021,hl:#98971a,fg+:#458588,hl+:#cc241d,info:#b16286"'
   alias fzf='sk'
 end
 
+# fd - find replacement
 if type -q fd
     alias fd='fd --hidden'
     alias fda='fd --no-ignore'
@@ -58,6 +63,7 @@ if type -q fd
     end
 end
 
+# rg - grep replacement
 if type -q rg
     alias rg='rg --hidden'
     alias rga='rg --no-ignore'
@@ -95,9 +101,6 @@ if type -q ccze
     end
 end
 
-alias serve-http='python -m SimpleHTTPServer 8000'
-alias serve-http3='python3 -m http.server 8000 --bind 127.0.0.1'
-
 if type -q colordiff
     alias diff='colordiff --ignore-space-change'
 else
@@ -109,6 +112,9 @@ if type -q autossh
         command autossh -M 0 $argv
     end
 end
+
+alias serve-http='python -m SimpleHTTPServer 8000'
+alias serve-http3='python3 -m http.server 8000 --bind 127.0.0.1'
 
 # Network Debugging
 function get-port-app
