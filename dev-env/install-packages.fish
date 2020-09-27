@@ -7,6 +7,8 @@ wemux \
 neovim \
 ripgrep \
 TankerHQ/homebrew-repo/ruplacer \
+muesli/homebrew-tap/duf \
+ncdu \
 fd \
 sk \
 tldr \

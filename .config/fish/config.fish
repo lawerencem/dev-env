@@ -77,8 +77,11 @@ end
 
 if type -q exa
     alias l='exa --oneline'
+    alias la='exa --oneline --all'
     alias ls='exa --oneline'
+    alias lsa='exa --oneline --all'
     alias ll='exa --long'
+    alias lla='exa --long --all'
     alias lt='exa --tree'
 end
 
@@ -168,6 +171,10 @@ alias grbr='./gradlew bootrun'
 alias grns='./gradlew npmStart'
 
 # Docker
+alias d='docker'
 alias docker-stop-all='docker stop (docker ps -q)'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
+# THEME PURE #
+set fish_function_path /Users/kavijivan/.config/fish/functions/theme-pure/functions/ $fish_function_path
+source /Users/kavijivan/.config/fish/functions/theme-pure/conf.d/pure.fish
