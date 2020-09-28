@@ -152,7 +152,7 @@ alias glt='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Cr
 alias gg='git log --graph --decorate --oneline --simplify-by-decoration'
 alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
 alias gga='git log --graph --oneline --decorate --all'
-alias git-delete-working-branches="git branch | grep -v '.*Development\|.*master' | xargs git branch -D"
+alias git-delete-working-branches="git branch | grep -v '.*develop\|.*master' | xargs git branch -D"
 
 # NPM
 alias nrs='npm run start'
