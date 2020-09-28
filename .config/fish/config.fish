@@ -176,5 +176,5 @@ alias docker-stop-all='docker stop (docker ps -q)'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
 # THEME PURE #
-set fish_function_path /Users/kavijivan/.config/fish/functions/theme-pure/functions/ $fish_function_path
-source /Users/kavijivan/.config/fish/functions/theme-pure/conf.d/pure.fish
+set fish_function_path $HOME/.config/fish/functions/theme-pure/functions/ $fish_function_path
+source $HOME/.config/fish/functions/theme-pure/conf.d/pure.fish
