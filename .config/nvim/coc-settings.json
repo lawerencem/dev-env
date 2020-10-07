@@ -7,6 +7,12 @@
       "default": true
     }
   ],
+  "java.imports.gradle.wrapper.checksums": [
+    {
+      "sha256": "6784da65e8a42567ef247ffb1719b7a2d3bfbc15bcbaef3af5499de08b24c966",
+      "allowed": true
+    }
+  ],
   "cSpell.enabled": false,
   "cSpell.enabledLanguageIds": [
     "asciidoc",
