@@ -6,7 +6,7 @@ function gcb
     set stashed 1
   end
 
-  git checkout Development
+  git checkout develop
   git pull
 
   if test $stashed -eq 1
