@@ -129,9 +129,6 @@ if has('persistent_undo')
 endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
 
-" polygot
-let g:polyglot_disabled = []
-
 " emmet
 let g:user_emmet_leader_key=','
 
