@@ -218,6 +218,7 @@ omap af <Plug>(coc-funcobj-a)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 nnoremap <leader>f :Format<cr>
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "xmap <leader>f  <Plug>(coc-format-selected)
 "nmap <leader>f  <Plug>(coc-format-selected)
 
