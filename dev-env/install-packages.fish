@@ -35,6 +35,7 @@ docker-completion
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
+rustup component add rls rust-analysis rust-src
 
 # wemux
 if test ! (grep host_list=\($USER\) /usr/local/etc/wemux.conf)
