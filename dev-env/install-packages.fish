@@ -14,8 +14,7 @@ fd \
 sk \
 tldr \
 exa \
-colordiff \
-diff-so-fancy \
+git-delta \
 bat \
 htop \
 watchexec \

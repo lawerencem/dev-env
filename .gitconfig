@@ -1,28 +1,21 @@
 [include]
-	path=~/.gituserconfig
+  path=~/.gituserconfig
 [push]
-	default = simple
+  default = simple
 [pull]
-	rebase = true
+  rebase = true
 [status]
-	submoduleSummary = true
+  submoduleSummary = true
 [diff]
-	submodule = log
-[core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  submodule = log
 [color]
-	ui = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = yellow
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-[diff-so-fancy]
-	first-run = false
+  ui = true
+[core]
+  pager = delta
+[delta]
+  line-numbers = true
+  plus-color = "#012800"
+  minus-color = "#340001"
+  syntax-theme = Monokai Extended
+[interactive]
+  diffFilter = delta --color-only
