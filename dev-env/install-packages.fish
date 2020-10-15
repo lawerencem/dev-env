@@ -23,6 +23,7 @@ ccze \
 svn \
 git \
 git-flow \
+gitui \
 github/gh/gh \
 hub \
 golang \
