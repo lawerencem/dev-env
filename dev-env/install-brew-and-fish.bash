@@ -5,6 +5,6 @@ set -e
 brew install git
 git -C "$(brew --repo homebrew/core)" fetch --unshallow
 
-brew install fish
+brew install fish starship
 sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish

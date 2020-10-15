@@ -3,6 +3,7 @@ brew tap \
 homebrew/cask-fonts
 
 brew install \
+starship \
 wemux \
 neovim \
 ripgrep \
