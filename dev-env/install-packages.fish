@@ -10,6 +10,7 @@ ripgrep \
 TankerHQ/homebrew-repo/ruplacer \
 muesli/homebrew-tap/duf \
 ncdu \
+zoxide \
 fd \
 sk \
 tldr \

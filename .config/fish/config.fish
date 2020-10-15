@@ -176,4 +176,5 @@ alias docker-stop-all='docker stop (docker ps -q)'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
 
+zoxide init fish | source
 starship init fish | source
