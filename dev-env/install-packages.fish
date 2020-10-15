@@ -18,6 +18,7 @@ exa \
 git-delta \
 bat \
 htop \
+clementtsang/bottom/bottom \
 watchexec \
 ccze \
 svn \
