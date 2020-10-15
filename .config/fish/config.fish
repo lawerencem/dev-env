@@ -76,12 +76,9 @@ if type -q nvim
 end
 
 if type -q exa
-    alias l='exa --oneline'
-    alias la='exa --oneline --all'
-    alias ls='exa --oneline'
-    alias lsa='exa --oneline --all'
-    alias ll='exa --long'
-    alias lla='exa --long --all'
+    alias ls='exa --grid  --color auto --icons --all --sort type'
+    alias ll='exa --long --color always --icons --all --sort type'
+
     alias lt='exa --tree'
 end
 
