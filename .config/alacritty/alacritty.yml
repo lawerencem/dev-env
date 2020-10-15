@@ -2,15 +2,14 @@ window:
   decorations: none
   startup_mode: Maximized
   title: Alacritty
+  dynamic_title: false
 
 scrolling:
   history: 10000
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  multiplier: 3
-  # Scroll to the bottom when new text is written to the terminal.
-  auto_scroll: false
+  multiplier: 4
 
 font:
   normal:
@@ -22,7 +21,7 @@ font:
     y: 0
   glyph_offset:
     x: 0
-    y: 0
+    y: 1
 
   # Thin stroke font rendering (macOS only)
   #
@@ -71,13 +70,12 @@ colors:
     cyan:    '0x8ec07c'
     white:   '0xebdbb2'
 
-background_opacity: 0.55
+background_opacity: 0.80
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: false
 
-dynamic_title: false
 
 cursor:
   # Values for `style`:
