@@ -54,3 +54,6 @@ For example if I want to add my neovim config I would
 
     dg add ~/.config/nvim/init.vim
 
+## Other References
+- [Modern CLI](https://app.gitbook.com/@kjivan/s/modern-cli)
+- [Rusty Terminal](https://dev.to/22mahmoud/my-terminal-became-more-rusty-4g8l)
