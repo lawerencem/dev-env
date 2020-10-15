@@ -15,6 +15,7 @@ fd \
 sk \
 tldr \
 exa \
+colordiff \
 git-delta \
 bat \
 htop \
