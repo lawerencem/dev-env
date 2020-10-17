@@ -30,6 +30,7 @@ github/gh/gh \
 hub \
 golang \
 elm \
+jq \
 python3 \
 node \
 yarn \
