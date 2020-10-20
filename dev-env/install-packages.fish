@@ -36,7 +36,8 @@ node \
 yarn \
 exercism \
 autossh \
-docker-completion
+docker-completion \
+tokei
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
