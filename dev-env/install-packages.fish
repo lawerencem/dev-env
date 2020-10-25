@@ -34,6 +34,8 @@ jq \
 python3 \
 node \
 yarn \
+netlify-cli \
+now-cli \
 exercism \
 autossh \
 docker-completion \
@@ -73,6 +75,7 @@ docker \
 slack \
 discord \
 gitter \
+signal \
 insomnia \
 simplenote \
 grammarly \
