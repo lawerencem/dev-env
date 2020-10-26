@@ -39,7 +39,7 @@ now-cli \
 exercism \
 autossh \
 docker-completion \
-tokei
+scc
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
@@ -77,6 +77,7 @@ discord \
 gitter \
 signal \
 insomnia \
+insomnia-designer \
 simplenote \
 grammarly \
 font-lato \
