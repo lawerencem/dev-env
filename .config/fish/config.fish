@@ -49,8 +49,8 @@ end
 
 # fd - find replacement
 if type -q fd
-    alias fd='fd --hidden'
-    alias fda='fd --no-ignore'
+    alias fdh='fd --hidden'
+    alias fda='fdh --no-ignore'
 
     if type -q sk
         set -xg SKIM_DEFAULT_COMMAND "fd"
@@ -65,7 +65,7 @@ end
 
 # rg - grep replacement
 if type -q rg
-    alias rg='rg --hidden'
+    alias rgh='rg --hidden'
     alias rga='rg --no-ignore'
     alias rgi='sk --ansi -i -c \'rg --color=always --line-number "{}"\''
 end
