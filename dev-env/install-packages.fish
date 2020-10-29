@@ -7,6 +7,7 @@ starship \
 wemux \
 neovim \
 ripgrep \
+semgrep \
 TankerHQ/homebrew-repo/ruplacer \
 muesli/homebrew-tap/duf \
 ncdu \
