@@ -55,6 +55,9 @@ call plug#end()
 " leader
 let mapleader = "\<Space>"
 
+" writing
+nnoremap <leader>w :set spell<cr>
+
 " autosave
 let g:auto_save_in_insert_mode = 0
 let g:auto_save = 1
