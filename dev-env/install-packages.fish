@@ -64,7 +64,6 @@ end
 
 brew cask install \
 google-chrome \
-firefox \
 brave-browser \
 spectacle \
 alacritty \
@@ -83,9 +82,7 @@ font-open-sans \
 font-raleway \
 font-source-code-pro \
 font-source-code-pro-for-powerline \
-spotify \
-amazon-music \
-sonic-pi
+spotify
 
 
 pip3 install --upgrade \
