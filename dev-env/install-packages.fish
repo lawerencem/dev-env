@@ -27,9 +27,7 @@ git \
 git-flow \
 gitui \
 github/gh/gh \
-hub \
 golang \
-elm \
 jq \
 python3 \
 node \
