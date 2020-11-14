@@ -113,6 +113,10 @@ if type -q autossh
     end
 end
 
+function create-min-snow
+  yarn create snowpack-app $argv --template @snowpack/app-template-minimal --use-yarn
+end
+
 alias serve-http='python -m SimpleHTTPServer 8000'
 alias serve-http3='python3 -m http.server 8000 --bind 127.0.0.1'
 

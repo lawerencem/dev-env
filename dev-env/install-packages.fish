@@ -23,7 +23,6 @@ htop \
 clementtsang/bottom/bottom \
 watchexec \
 ccze \
-svn \
 git \
 git-flow \
 gitui \
