@@ -19,8 +19,8 @@ Plug 'djoshea/vim-autoread'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+Plug 'lotabout/skim.vim'
 Plug 'wincent/ferret'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -28,9 +28,9 @@ Plug 'idanarye/vim-vebugger'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
+Plug 'tomtom/tcomment_vim'
 Plug 'luochen1990/rainbow'
 
-Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
@@ -40,15 +40,23 @@ Plug 'neoclide/coc-vetur', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-angular', {'do': 'yarn install --frozen-lockfile'}
+Plug 'dansomething/coc-groovy', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-spell-checker', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'mlaursen/vim-react-snippets'
 call plug#end()
 
 " leader
 let mapleader = "\<Space>"
+
+" writing
+nnoremap <leader>w :set spell<cr>
 
 " autosave
 let g:auto_save_in_insert_mode = 0
@@ -84,7 +92,6 @@ nmap [h <Plug>(GitGutterPrevHunk)
 set relativenumber
 set number
 set list listchars=tab:▸-,trail:⊡
-set colorcolumn=80
 set showmatch
 set incsearch ignorecase smartcase
 set noswapfile
@@ -95,7 +102,6 @@ set iskeyword+=-
 
 filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
-autocmd FileType vue,elm,javascript,typescript,css,scss,html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 
 " fzf
 nnoremap <leader>p :Files<cr>
@@ -108,8 +114,8 @@ let g:elm_setup_keybindings = 0
 
 " netrw
 command! E Explore
-nnoremap <leader>ee :E<cr>
-nnoremap <leader>er :Rexplore<cr>
+nnoremap <leader>e :E<cr>
+nnoremap <leader>r :Rexplore<cr>
 let g:netrw_localrmdir='rm -r'
 let g:netrw_banner="0"
 let g:netrw_sort_sequence=""
@@ -126,41 +132,6 @@ if has('persistent_undo')
 endif
 nnoremap <leader>u :UndotreeToggle<cr>:UndotreeFocus <cr><Paste>
 
-" polygot
-let g:polyglot_disabled = []
-
-" ale
-"let g:ale_completion_enabled = 1
-nnoremap <leader>d :ALEGoToDefinition<cr>
-nnoremap <leader>r :ALEFindReferences<cr>
-nnoremap <leader>h :ALEHover<cr>
-
-nnoremap <leader>fe :let g:ale_fix_on_save = 1<cr>
-nnoremap <leader>fd :let g:ale_fix_on_save = 0<cr>
-nnoremap <leader>ff :ALEFix<cr>
-
-let g:ale_linters = {
-\   'rust': ['rls'],
-\   'java': ['javalsp'],
-\}
-
-
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'css': ['prettier'],
-\   'scss': ['prettier'],
-\   'html': ['prettier'],
-\   'json': ['prettier'],
-\   'vue': ['prettier'],
-\   'rust' : ['rustfmt'],
-\   'javascript': ['eslint', 'prettier'],
-\   'typescript': ['eslint', 'prettier'],
-\   'typescriptreact': ['prettier'],
-\   'markdown': ['prettier'],
-\   'python': ['black'],
-\   'java': ['google_java_format']
-\}
-
 " emmet
 let g:user_emmet_leader_key=','
 
@@ -169,6 +140,13 @@ let g:rainbow_active = 1
 
 " use system clipboard
 set clipboard^=unnamed,unnamedplus
+
+let g:FerretExecutableArguments = {
+  \   'rg': '--vimgrep --no-heading --no-config --max-columns 4096'
+  \ }
+
+nnoremap <leader>j :cn <cr>
+nnoremap <leader>k :cp <cr>
 
 " coc settings
 set hidden
@@ -187,3 +165,103 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" Use <cr> to confirm completion
+if has('patch8.1.1068')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nmap <leader>rn <Plug>(coc-rename)
+
+augroup mygroup
+  autocmd!
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+nmap <leader>x  <Plug>(coc-fix-current)
+
+" Introduce function text object
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
+
+" Use <TAB> for selections ranges.
+" NOTE: Requires 'textDocument/selectionRange' support from the language server.
+" coc-tsserver, coc-python are the examples of servers that support it.
+"nmap <silent> <TAB> <Plug>(coc-range-select)
+"xmap <silent> <TAB> <Plug>(coc-range-select)
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+nnoremap <leader>f :Format<cr>
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+"xmap <leader>f  <Plug>(coc-format-selected)
+"nmap <leader>f  <Plug>(coc-format-selected)
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Mappings using CoCList:
+" Show all diagnostics.
+nnoremap <silent> <space>la  :<C-u>CocList diagnostics<cr>
+" Manage extensions.
+nnoremap <silent> <space>le  :<C-u>CocList extensions<cr>
+" Show commands.
+nnoremap <silent> <space>ld  :<C-u>CocList commands<cr>
+" Find symbol of current document.
+nnoremap <silent> <space>lm  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+nnoremap <silent> <space>ls  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>lj  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>lk  :<C-u>CocPrev<CR>
+" Resume latest coc list.
+nnoremap <silent> <space>lr :<C-u>CocListResume<CR>
+
+let t:is_transparent = 1
+function! Toggle_transparent()
+    if t:is_transparent == 0
+        hi Normal guibg=NONE ctermbg=NONE
+        let t:is_transparent = 1
+    else
+        let t:is_tranparent = 0
+    endif
+endfunction
+hi Normal guibg=NONE ctermbg=NONE
+nnoremap <C-t> : call Toggle_transparent()<CR>

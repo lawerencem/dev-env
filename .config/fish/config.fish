@@ -17,17 +17,12 @@ end
 if test -d $HOME/.cargo/bin
     set -gx PATH $PATH $HOME/.cargo/bin
 end
-if test -d $HOME/cg1v-dev-tools
-    set -gx PATH $PATH $HOME/cg1v-dev-tools
-end
-if test -d $HOME/owf/apache-tomcat
-    set -gx TOMCAT_DIR $HOME/owf/apache-tomcat
-end
-if test -d /usr/local/opt/mysql@5.5/bin
-    set -gx PATH $PATH /usr/local/opt/mysql@5.5/bin
-end
 if test -d $HOME/.poetry/bin
     set -gx PATH $PATH $HOME/.poetry/bin
+end
+
+if test -f $HOME/.local.fish
+     source $HOME/.local.fish
 end
 
 set -xg fish_greeting ""
@@ -36,26 +31,43 @@ set -xg VISUAL nvim
 set -xg EDITOR $VISUAL
 set -xg GIT_EDITOR $VISUAL
 
+# dev-env git
 alias dg="/usr/bin/git --git-dir=$HOME/.dev-env.git/ --work-tree=$HOME"
 
+# fish editing
 alias reload="source $HOME/.config/fish/config.fish"
 alias edit="vi $HOME/.config/fish/config.fish"
 
-if type -q fd
-    alias c='cd (fd --type d --color=always | fzf --ansi)'
-    alias ch='cd (fd --type d --color=always --search-path $HOME | fzf --ansi)'
-    alias v='vi (fd --color=always | fzf --ansi)'
-    alias vh='vi (fd --color=always --search-path $HOME | fzf --ansi)'
+# ctrl-s for sudo
+bind \cs runsudo
 
-    alias fdi='fd --no-ignore'
-
-    set -xg FZF_DEFAULT_COMMAND "fd --no-ignore --hidden --color=always"
-    set -xg FZF_DEFAULT_OPTS "--ansi"
-    set -xg FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND --search-path \$dir"
+# sk - fast fuzzy finder
+if type -q sk
+  set -xg SKIM_DEFAULT_OPTIONS '--ansi --color="fg:#458588,bg:#1d2021,hl:#98971a,fg+:#458588,hl+:#cc241d,info:#b16286"'
+  alias fzf='sk'
 end
 
+# fd - find replacement
+if type -q fd
+    alias fdh='fd --hidden'
+    alias fda='fdh --no-ignore'
+
+    if type -q sk
+        set -xg SKIM_DEFAULT_COMMAND "fd"
+
+        alias c='cd (fd --type d | sk)'
+        alias ch='cd (fd --type d --search-path $HOME | sk)'
+        alias v='vi (fd | sk)'
+        alias vh='vi (fd --search-path $HOME | sk)'
+        alias ska='fda | sk'
+    end
+end
+
+# rg - grep replacement
 if type -q rg
-    alias rgi='rg --no-ignore'
+    alias rgh='rg --hidden'
+    alias rga='rg --no-ignore'
+    alias rgi='sk --ansi -i -c \'rg --color=always --line-number "{}"\''
 end
 
 if type -q nvim
@@ -64,9 +76,10 @@ if type -q nvim
 end
 
 if type -q exa
-    alias l='exa'
-    alias ls='exa'
-    alias ll='exa -l'
+    alias ls='exa --grid  --color auto --all --sort type'
+    alias ll='exa --long --color always --all --sort type'
+
+    alias lt='exa --tree'
 end
 
 alias grep='command grep --color=auto'
@@ -100,12 +113,28 @@ if type -q autossh
     end
 end
 
+function create-min-snow
+  yarn create snowpack-app $argv --template @snowpack/app-template-minimal --use-yarn
+end
+
+alias serve-http='python -m SimpleHTTPServer 8000'
+alias serve-http3='python3 -m http.server 8000 --bind 127.0.0.1'
+
+# Network Debugging
+function get-port-app
+    command lsof -nP -iTCP:$argv | grep LISTEN
+end
+
+# Git
 alias g='git'
 alias gs='git status --short --branch'
 alias gst='git stash'
 alias gco='git checkout'
 alias gcop='git checkout --patch'
 alias gr='git reset'
+alias grh='git reset HEAD'
+alias grhp='git reset HEAD --patch'
+alias grhh='git reset HEAD --hard'
 alias ga='git add'
 alias gap='git add --patch'
 alias gai='git add --interactive '
@@ -117,22 +146,36 @@ alias gpl='git pull'
 alias gup='git stash; git pull; git stash pop'
 alias gps='git push'
 alias gd='git diff'
-alias gds='git diff --staged'
+alias gdc='git diff --cached'
 alias gl='git log --abbrev-commit --pretty=oneline'
+alias gld='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s" --date=short'
+alias glt='git log --pretty=format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s"'
 alias gg='git log --graph --decorate --oneline --simplify-by-decoration'
 alias gfg='git log --all --graph --decorate --oneline --simplify-by-decoration'
 alias gga='git log --graph --oneline --decorate --all'
-alias gbr="git branch | grep -v "Development" | xargs git branch -D"
+alias git-delete-working-branches="git branch | grep -v '.*develop\|.*master' | xargs git branch -D"
 
+# NPM
 alias nrs='npm run start'
 alias nrb='npm run build'
 alias nrt='npm run test'
 alias nrth='npm run test-headless'
 alias nrl='npm run lint'
 alias nre='npm run e2e'
+alias acid-test-gyp='curl -sL https://github.com/nodejs/node-gyp/raw/master/macOS_Catalina_acid_test.sh | bash'
 
-alias gcb='./gradlew clean build'
-alias gcbp='./gradlew clean build publishToMavenLocal'
-alias gcbr='./gradlew clean bootrun'
+# Gradle
+alias grcb='./gradlew clean build'
+alias grcbp='./gradlew clean build publishToMavenLocal'
+alias grcbr='./gradlew clean bootrun'
+alias grbr='./gradlew bootrun'
+alias grns='./gradlew npmStart'
+
+# Docker
+alias d='docker'
+alias docker-stop-all='docker stop (docker ps -q)'
 
 [ -f /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish ]; and source /home/linuxbrew/.linuxbrew/share/autojump/autojump.fish
+
+zoxide init fish | source
+starship init fish | source

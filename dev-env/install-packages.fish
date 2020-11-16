@@ -3,38 +3,45 @@ brew tap \
 homebrew/cask-fonts
 
 brew install \
+starship \
 wemux \
 neovim \
 ripgrep \
+semgrep \
+TankerHQ/homebrew-repo/ruplacer \
+muesli/homebrew-tap/duf \
+ncdu \
+zoxide \
 fd \
-fzf \
+sk \
 tldr \
 exa \
 colordiff \
-diff-so-fancy \
+git-delta \
 bat \
 htop \
+clementtsang/bottom/bottom \
 watchexec \
 ccze \
 git \
+git-flow \
+gitui \
 github/gh/gh \
-hub \
 golang \
-elm \
+jq \
 python3 \
 node \
 yarn \
+netlify-cli \
+now-cli \
 exercism \
 autossh \
-docker-completion
+docker-completion \
+scc
 
 # rust
 curl https://sh.rustup.rs -sSf | bash -s -- -y
-
-# fzf
-if test ! (grep fzf_key_bindings $HOME/.config/fish/functions/fish_user_key_bindings.fish)
-    yes | sh (brew --prefix)/opt/fzf/install
-end
+rustup component add rls rust-analysis rust-src
 
 # wemux
 if test ! (grep host_list=\($USER\) /usr/local/etc/wemux.conf)
@@ -57,7 +64,6 @@ end
 
 brew cask install \
 google-chrome \
-firefox \
 brave-browser \
 spectacle \
 alacritty \
@@ -65,15 +71,18 @@ iterm2 \
 docker \
 slack \
 discord \
+gitter \
+signal \
 insomnia \
+insomnia-designer \
 simplenote \
+grammarly \
 font-lato \
 font-open-sans \
 font-raleway \
-font-sourcecodepro-nerd-font \
-font-sourcecodepro-nerd-font-mono \
-amazon-music \
-thinkorswim
+font-source-code-pro \
+font-source-code-pro-for-powerline \
+spotify
 
 
 pip3 install --upgrade \
@@ -103,5 +112,4 @@ prettier \
 @vue/cli \
 @vue/cli-init \
 @angular/cli \
-create-react-app \
 expo-cli
