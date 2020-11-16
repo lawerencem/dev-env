@@ -97,7 +97,7 @@ set iskeyword+=-
 
 filetype plugin on
 autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
-autocmd FileType vue,elm,javascript,typescript,css,scss,html setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+autocmd FileType vue,elm,javascript,typescript,css,scss,html setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 
 " fzf
 nnoremap <leader>p :Files<cr>

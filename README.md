@@ -4,7 +4,7 @@ Feel free to fork and manipulate the repo as you see fit. If you think I'll like
 
 ## Scripts
 - dev-env/install-brew-fish.bash - Install brew and fish
-- dev-env/setup-dev-env.bash - Checkout dev-env as a [bare git repo](https://www.atlassian.com/git/tutorials/dotfiles) overlayed with your home directory
+- dev-env/setup-dev-env.bash - Checkout kjivan dev-env as a [bare git repo](https://www.atlassian.com/git/tutorials/dotfiles) overlayed with your home directory
 - dev-env/install-packages.fish - Install the packages I use most frequently (designed to be fast and idempotent)
 - reindex-spotlight.fish - If spotlight isn't indexing fwr use this script
 - dev-env/create-dev-env.bash - Create a dev-env bare repo (how I originally created a bare repo)
